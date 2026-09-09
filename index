@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华工科技精益改善 · 案例展示平台</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ==================== 顶部导航栏 ==================== -->
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo" onclick="scrollToTop()">
+            <img src="assets/logo.png" alt="华工科技" class="logo-img">
+            <span class="logo-text">华工科技精益改善案例展示平台</span>
+        </div>
+        <nav class="main-nav" id="mainNav">
+            <a href="#banner" class="nav-link active">首页</a>
+            <a href="#categories" class="nav-link">分类</a>
+            <a href="#cases" class="nav-link">案例</a>
+            <a href="#about" class="nav-link">关于</a>
+            <a href="#qrcode" class="nav-link">关注公众号</a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- ==================== 首页轮播 Banner ==================== -->
+<section class="banner" id="banner">
+    <div class="banner-slides" id="bannerSlides">
+        <!-- Slide 1 -->
+        <div class="banner-slide active" style="background:linear-gradient(135deg,#0052cc 0%,#003d99 100%);">
+            <div class="banner-content">
+                <h1>持续改善 · 追求卓越</h1>
+                <p>汇集全公司精益改善项目案例，赋能各分子公司互相学习、共同提升</p>
+                <a href="#cases" class="banner-btn">浏览案例 →</a>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="banner-slide" style="background:linear-gradient(135deg,#1a2332 0%,#2d3e50 100%);">
+            <div class="banner-content">
+                <h1>精益思维 · 落地生根</h1>
+                <p>从5S到自动化，从流程优化到成本削减——每一个改善都值得被看见</p>
+                <a href="#categories" class="banner-btn">按分类查看 →</a>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="banner-slide" style="background:linear-gradient(135deg,#0052cc 0%,#1a2332 100%);">
+            <div class="banner-content">
+                <h1>分享经验 · 共建体系</h1>
+                <p>关注公众号 精益HPS，获取最新改善资讯与培训资源</p>
+                <a href="#qrcode" class="banner-btn">关注公众号 →</a>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播控制点 -->
+    <div class="banner-dots" id="bannerDots">
+        <span class="banner-dot active" data-slide="0"></span>
+        <span class="banner-dot" data-slide="1"></span>
+        <span class="banner-dot" data-slide="2"></span>
+    </div>
+    <!-- 左右箭头 -->
+    <button class="banner-arrow prev" id="bannerPrev" aria-label="上一张">‹</button>
+    <button class="banner-arrow next" id="bannerNext" aria-label="下一张">›</button>
+</section>
+
+<!-- ==================== 项目分类导航 ==================== -->
+<section class="categories-section" id="categories">
+    <div class="container">
+        <div class="section-title">
+            <h2>项目分类导航</h2>
+            <p>按改善领域快速筛选相关案例</p>
+        </div>
+        <div class="category-grid">
+            <!-- 直接材料类改善 -->
+            <div class="category-group-label">一、直接材料类改善</div>
+            <div class="category-card" data-category="yield">
+                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                <h3>良率改善</h3>
+                <p>提升产品直通率与合格率</p>
+                <span class="cat-count" id="countYield">0</span>
+            </div>
+            <div class="category-card" data-category="substitute">
+                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="8" height="12" rx="1"/><rect x="14" y="6" width="8" height="12" rx="1"/><path d="M10 12h4"/></svg></div>
+                <h3>材料替代</h3>
+                <p>低成本材料替代方案</p>
+                <span class="cat-count" id="countSubstitute">0</span>
+            </div>
+            <div class="category-card" data-category="reduce">
+                <div class="cat-icon">⬇️</div>
+                <h3>用量降低</h3>
+                <p>减少原材料消耗</p>
+                <span class="cat-count" id="countReduce">0</span>
+            </div>
+
+            <!-- 直接人工类改善 -->
+            <div class="category-group-label">二、直接人工类改善</div>
+            <div class="category-card" data-category="headcount">
+                <div class="cat-icon">👥</div>
+                <h3>人数优化</h3>
+                <p>少人化与岗位精简</p>
+                <span class="cat-count" id="countHeadcount">0</span>
+            </div>
+            <div class="category-card" data-category="hours">
+                <div class="cat-icon">⏱️</div>
+                <h3>工时优化</h3>
+                <p>缩短作业时间与节拍平衡</p>
+                <span class="cat-count" id="countHours">0</span>
+            </div>
+
+            <!-- 制造费用类改善 -->
+            <div class="category-group-label">三、制造费用类改善</div>
+            <div class="category-card" data-category="utilities">
+                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                <h3>水电气</h3>
+                <p>能源消耗管控与节能</p>
+                <span class="cat-count" id="countUtilities">0</span>
+            </div>
+            <div class="category-card" data-category="auxiliary">
+                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
+                <h3>辅料</h3>
+                <p>辅助材料降本与管理</p>
+                <span class="cat-count" id="countAuxiliary">0</span>
+            </div>
+            <div class="category-card" data-category="spare_parts">
+                <div class="cat-icon">🔧</div>
+                <h3>备件</h3>
+                <p>备品备件寿命管理</p>
+                <span class="cat-count" id="countSpareParts">0</span>
+            </div>
+            <div class="category-card" data-category="indirect_staff">
+                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <h3>间接人员</h3>
+                <p>间接人力配置优化</p>
+                <span class="cat-count" id="countIndirectStaff">0</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 案例卡片列表 ==================== -->
+<section class="cases-section" id="cases">
+    <div class="container">
+        <div class="section-title">
+            <h2>改善案例库</h2>
+            <p>点击卡片查看完整项目详情</p>
+        </div>
+
+        <!-- 筛选标签栏 -->
+        <div class="filter-bar" id="filterBar">
+            <button class="filter-tag active" data-filter="all">全部</button>
+            <button class="filter-tag" data-filter="yield">良率改善</button>
+            <button class="filter-tag" data-filter="substitute">材料替代</button>
+            <button class="filter-tag" data-filter="reduce">用量降低</button>
+            <button class="filter-tag" data-filter="headcount">人数优化</button>
+            <button class="filter-tag" data-filter="hours">工时优化</button>
+            <button class="filter-tag" data-filter="utilities">水电气</button>
+            <button class="filter-tag" data-filter="auxiliary">辅料</button>
+            <button class="filter-tag" data-filter="spare_parts">备件</button>
+            <button class="filter-tag" data-filter="indirect_staff">间接人员</button>
+        </div>
+
+        <!-- 案例卡片网格 -->
+        <div class="case-grid" id="caseGrid">
+            <!-- 由 JS 动态生成 -->
+        </div>
+
+        <!-- 无结果提示 -->
+        <div class="no-result" id="noResult" style="display:none;">
+            <p>该分类下暂无案例</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 关于平台 ==================== -->
+<section class="about-section" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>关于本平台</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-block">
+                <h3>平台定位</h3>
+                <p>HPS改善项目案例展示平台面向全公司各分子公司，系统性地收集、整理和展示精益改善项目案例，为带级人员提供参考借鉴的知识库。</p>
+            </div>
+            <div class="about-block">
+                <h3>使用方式</h3>
+                <p>① 通过分类导航或筛选标签快速定位感兴趣的案例领域；② 点击案例卡片查看项目详情，包含实拍图、改善思路与落地成果；③ 参考案例经验，结合本单位实际推进改善项目。</p>
+            </div>
+            <div class="about-block">
+                <h3>案例投稿</h3>
+                <p>欢迎各分子公司精益改善团队提交优秀案例，关注公众号 精益HPS 获取投稿渠道与模板。案例经审核后将发布至本平台。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 关注公众号 ==================== -->
+<section class="qrcode-section" id="qrcode">
+    <div class="container">
+        <div class="qr-card">
+            <div class="qr-left">
+                <h2>关注公众号 精益HPS</h2>
+                <p>扫码关注 精益HPS 公众号，获取：</p>
+                <ul>
+                    <li>· 最新改善项目案例推送</li>
+                    <li>· 精益带级培训通知与资料</li>
+                    <li>· 改善经验交流与答疑</li>
+                    <li>· 案例投稿与审核进度查询</li>
+                </ul>
+            </div>
+            <div class="qr-right">
+                <div class="qr-img">
+                    <img src="assets/公众号二维码.png" alt="精益HPS公众号二维码">
+                </div>
+                <p class="qr-label">扫码关注 精益HPS</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 页脚 ==================== -->
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 华工科技精益改善 · 案例展示平台 · 精益运营部</p>
+        <p class="footer-sub">本平台案例仅供内部学习参考，请勿外传</p>
+    </div>
+</footer>
+
+<!-- ==================== 案例详情弹窗 ==================== -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose" aria-label="关闭">✕</button>
+        <div class="modal-body" id="modalBody">
+            <!-- 由 JS 动态填充 -->
+        </div>
+    </div>
+</div>
+
+<!-- ==================== 返回顶部 ==================== -->
+<button class="back-top" id="backTop" aria-label="返回顶部">↑</button>
+
+<script src="js/data.js?v=3"></script>
+<script src="js/main.js?v=3"></script>
+</body>
+</html>
