@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <!-- 华工科技 HGTECH 风格 logo - 红色字母组合建筑图标 -->
+    <g fill="#c8102e">
+        <!-- H 左侧 -->
+        <rect x="20" y="20" width="14" height="160"/>
+        <rect x="20" y="92" width="56" height="14"/>
+        <!-- G 中间 -->
+        <path d="M 90 20 L 130 20 L 130 32 L 102 32 L 102 92 L 130 92 L 130 70 L 116 70 L 116 58 L 144 58 L 144 180 L 90 180 Z"/>
+        <!-- T 右上 -->
+        <rect x="154" y="20" width="46" height="14"/>
+        <rect x="170" y="20" width="14" height="160"/>
+        <!-- E 右下 -->
+        <path d="M 90 100 L 144 100 L 144 112 L 102 112 L 102 140 L 134 140 L 134 152 L 102 152 L 102 168 L 144 168 L 144 180 L 90 180 Z" fill="#c8102e"/>
+    </g>
+</svg>

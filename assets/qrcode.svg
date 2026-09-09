@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+    <!-- 精益HPS 二维码 - 居中红色华工logo -->
+    <rect width="300" height="300" fill="#ffffff"/>
+    <!-- 模拟二维码的方块矩阵（简化示意） -->
+    <g fill="#1a2332">
+        <!-- 三个定位角 -->
+        <rect x="10" y="10" width="60" height="60"/>
+        <rect x="20" y="20" width="40" height="40" fill="#ffffff"/>
+        <rect x="30" y="30" width="20" height="20"/>
+        <rect x="230" y="10" width="60" height="60"/>
+        <rect x="240" y="20" width="40" height="40" fill="#ffffff"/>
+        <rect x="250" y="30" width="20" height="20"/>
+        <rect x="10" y="230" width="60" height="60"/>
+        <rect x="20" y="240" width="40" height="40" fill="#ffffff"/>
+        <rect x="30" y="250" width="20" height="20"/>
+        <!-- 中部数据点（用华工logo覆盖） -->
+        <rect x="100" y="20" width="10" height="10"/>
+        <rect x="120" y="20" width="10" height="10"/>
+        <rect x="140" y="20" width="10" height="10"/>
+        <rect x="160" y="20" width="10" height="10"/>
+        <rect x="180" y="20" width="10" height="10"/>
+        <rect x="200" y="20" width="10" height="10"/>
+        <rect x="100" y="40" width="10" height="10"/>
+        <rect x="140" y="40" width="10" height="10"/>
+        <rect x="180" y="40" width="10" height="10"/>
+        <rect x="100" y="60" width="10" height="10"/>
+        <rect x="120" y="60" width="10" height="10"/>
+        <rect x="160" y="60" width="10" height="10"/>
+        <rect x="200" y="60" width="10" height="10"/>
+        <rect x="100" y="80" width="10" height="10"/>
+        <rect x="140" y="80" width="10" height="10"/>
+        <rect x="180" y="80" width="10" height="10"/>
+        <rect x="100" y="100" width="10" height="10"/>
+        <rect x="120" y="100" width="10" height="10"/>
+        <rect x="160" y="100" width="10" height="10"/>
+        <rect x="200" y="100" width="10" height="10"/>
+        <rect x="220" y="100" width="10" height="10"/>
+        <rect x="240" y="100" width="10" height="10"/>
+        <rect x="260" y="100" width="10" height="10"/>
+        <rect x="280" y="100" width="10" height="10"/>
+        <rect x="20" y="100" width="10" height="10"/>
+        <rect x="40" y="100" width="10" height="10"/>
+        <rect x="60" y="100" width="10" height="10"/>
+        <rect x="80" y="100" width="10" height="10"/>
+        <rect x="20" y="120" width="10" height="10"/>
+        <rect x="60" y="120" width="10" height="10"/>
+        <rect x="20" y="140" width="10" height="10"/>
+        <rect x="40" y="140" width="10" height="10"/>
+        <rect x="60" y="140" width="10" height="10"/>
+        <rect x="80" y="140" width="10" height="10"/>
+        <rect x="220" y="120" width="10" height="10"/>
+        <rect x="260" y="120" width="10" height="10"/>
+        <rect x="240" y="140" width="10" height="10"/>
+        <rect x="260" y="140" width="10" height="10"/>
+        <rect x="280" y="140" width="10" height="10"/>
+        <rect x="20" y="200" width="10" height="10"/>
+        <rect x="40" y="200" width="10" height="10"/>
+        <rect x="60" y="200" width="10" height="10"/>
+        <rect x="80" y="200" width="10" height="10"/>
+        <rect x="100" y="200" width="10" height="10"/>
+        <rect x="220" y="200" width="10" height="10"/>
+        <rect x="240" y="200" width="10" height="10"/>
+        <rect x="260" y="200" width="10" height="10"/>
+        <rect x="280" y="200" width="10" height="10"/>
+        <rect x="20" y="220" width="10" height="10"/>
+        <rect x="60" y="220" width="10" height="10"/>
+        <rect x="100" y="220" width="10" height="10"/>
+        <rect x="140" y="220" width="10" height="10"/>
+        <rect x="220" y="220" width="10" height="10"/>
+        <rect x="260" y="220" width="10" height="10"/>
+        <rect x="280" y="220" width="10" height="10"/>
+    </g>
+    <!-- 居中红色华工logo占位 -->
+    <g transform="translate(110, 110)">
+        <rect x="0" y="0" width="80" height="80" fill="#ffffff"/>
+        <g transform="translate(8, 8) scale(0.32)" fill="#c8102e">
+            <rect x="20" y="20" width="14" height="160"/>
+            <rect x="20" y="92" width="56" height="14"/>
+            <path d="M 90 20 L 130 20 L 130 32 L 102 32 L 102 92 L 130 92 L 130 70 L 116 70 L 116 58 L 144 58 L 144 180 L 90 180 Z"/>
+            <rect x="154" y="20" width="46" height="14"/>
+            <rect x="170" y="20" width="14" height="160"/>
+        </g>
+        <text x="40" y="76" text-anchor="middle" font-family="Microsoft YaHei" font-size="9" font-weight="700" fill="#1a2332">精益HPS</text>
+    </g>
+</svg>
