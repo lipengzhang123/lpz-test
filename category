@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改善案例 - 华工科技精益改善</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .category-header {
+            background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
+            color: #fff;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .category-header h1 { font-size: 28px; margin-bottom: 8px; }
+        .category-header p { font-size: 14px; opacity: 0.9; }
+        .back-link {
+            display: inline-block; margin-top: 16px; color: #fff;
+            text-decoration: none; font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.4);
+            padding: 6px 16px; border-radius: 20px; transition: background 0.2s;
+        }
+        .back-link:hover { background: rgba(255,255,255,0.15); }
+        .category-cases-section { padding: 48px 0 80px; background: #f5f7fa; min-height: 400px; }
+        .simple-case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; min-height: 200px; }
+        .simple-case-card {
+            background: #fff; border: 1px solid #e4e9ed; border-radius: 4px;
+            overflow: hidden; cursor: pointer;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .simple-case-card:hover {
+            box-shadow: 0 6px 20px rgba(0,82,204,0.12); transform: translateY(-2px);
+        }
+        .simple-case-img { width: 100%; height: 220px; overflow: hidden; background: #e4e9ed; }
+        .simple-case-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .simple-case-card:hover .simple-case-img img { transform: scale(1.05); }
+        .simple-case-info { padding: 16px 18px 18px; }
+        .simple-case-title {
+            font-size: 16px; font-weight: 700; color: #1a2332;
+            margin-bottom: 6px; line-height: 1.5;
+            display: -webkit-box; -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .simple-case-company { font-size: 13px; color: #5a6b7d; }
+        @media (max-width: 1024px) { .simple-case-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .simple-case-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="assets/logo.png" alt="华工科技" class="logo-img">
+            <span class="logo-text">华工科技精益改善案例展示平台</span>
+        </div>
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html#banner" class="nav-link">首页</a>
+            <a href="index.html#categories" class="nav-link">分类</a>
+            <a href="index.html#cases" class="nav-link">案例</a>
+            <a href="index.html#about" class="nav-link">关于</a>
+            <a href="index.html#qrcode" class="nav-link">关注公众号</a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<div class="category-header" id="categoryHeader">
+    <h1 id="categoryTitle">加载中...</h1>
+    <p id="categoryDesc"></p>
+    <a href="index.html#categories" class="back-link">← 返回分类导航</a>
+</div>
+
+<section class="category-cases-section">
+    <div class="container">
+        <div class="simple-case-grid" id="caseGrid"></div>
+        <div class="no-result" id="noResult" style="display:none;"><p>该分类下暂无案例</p></div>
+    </div>
+</section>
+
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose" aria-label="关闭">✕</button>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
+
+<button class="back-top" id="backTop" aria-label="返回顶部">↑</button>
+
+<script>
+const CATEGORY_MAP = {
+    all: "全部案例", yield: "良率改善", substitute: "材料替代", reduce: "用量降低",
+    headcount: "人数优化", hours: "工时优化", utilities: "水电气",
+    auxiliary: "辅料", spare_parts: "备件", indirect_staff: "间接人员"
+};
+
+// ===== 以下为同步脚本生成的数据，请勿手动修改 =====
+var CASES = [{"id":1,"title":"装配车间5S目视化标杆打造","category":"yield","categoryName":"良率改善","company":"华工图像","level":"黄带","date":"2026-03","tags":["5S","目视化","定置管理","现场改善"],"cover":"https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop","images":[],"summary":"总装一厂装配线区域物料摆放混乱、工具寻找耗时严重，平均每班次浪费在寻找工具和物料上的时间达45分钟。通过系统性推行5S管理，建立目视化标准，实现现场\"一眼可见、一秒可取\"的改善目标。 ","approach":["现状调研：绘制车间布局图，标记20处物料堆积点和15处工具分散区","整理阶段：清除区域内存放超3个月的呆滞物料共计1.2吨","整顿阶段：引入影子板工具柜12套，物料架定置标识84处","清扫阶段：制定设备日常清扫点检表，责任到人","标准化：编制《5S目视化管理手册》，拍照标杆区域供其他产线参照","素养固化：每日5S巡检打分，纳入班组绩效月度考核"],"results":[{"num":"68%","label":"工具寻找时间减少"},{"num":"45→8min","label":"每班次浪费时间"},{"num":"1.2t","label":"呆滞物料清除"}]},{"id":2,"title":"冲压产线换模时间SMED改善","category":"hours","categoryName":"工时优化","company":"华南工业园 · 冲压车间","level":"绿带","date":"2026-02","tags":["SMED","快速换模","OEE","流程优化"],"cover":"https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&h=500&fit=crop","images":[],"summary":"冲压线换模平均耗时38分钟，严重影响小批量多品种订单的交付能力。项目组运用SMED方法，将内部作业转化为外部作业，实现换模时间大幅压缩。 ","approach":["录像分析：对6次换模过程全程录像，逐帧分析区分内部/外部作业","并行作业：将模具预热、螺栓准备等5项作业转为停机前外部作业","快速夹紧：引入液压快速锁模装置替代螺栓紧固，夹紧时间减少60%","标准化作业：编制换模标准作业指导书（SOP），设定换模标准时间14分钟","人员培训：开展3轮换模实操培训，建立换模技能星级认证制度"],"results":[{"num":"63%","label":"换模时间缩短"},{"num":"38→14min","label":"平均换模时间"},{"num":"12%","label":"OEE提升 +"}]},{"id":3,"title":"包装材料成本削减项目","category":"substitute","categoryName":"材料替代","company":"西南基地 · 包装事业部","level":"绿带","date":"2026-01","tags":["降本增效","包装优化","VAVE","供应链"],"cover":"https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=500&fit=crop","images":[],"summary":"年度包装材料采购成本占比达产品成本的8.3%，高于行业平均水平。通过VAVE分析、材料替代和供应商整合，系统性削减包装成本。 ","approach":["成本拆解：对32种包材进行BOM级成本拆解，识别高成本物料8项","材料替代：将3款产品纸箱由5层瓦楞改为3层高强度瓦楞，强度达标且降本23%","结构优化：重新设计缓冲内衬结构，单套用量减少15%","供应商整合：将包材供应商从12家整合至6家，集中采购获得8%价格优惠","循环包装：对内部周转用箱引入可循环塑料箱，替代一次性纸箱","标准化：建立包材成本月度监控看板，异常波动自动预警"],"results":[{"num":"¥186万","label":"年化降本金额"},{"num":"22%","label":"包材成本占比 -"},{"num":"8.3%","label":"成本占比变化"}]},{"id":4,"title":"焊接工序缺陷率降低攻关","category":"yield","categoryName":"良率改善","company":"华北制造基地 · 焊接车间","level":"黑带","date":"2026-02","tags":["六西格玛","焊接缺陷","DOE","过程能力"],"cover":"https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=500&fit=crop","images":[],"summary":"焊接工序气孔缺陷率达4.2%，客户投诉频发。运用DMAIC方法论，通过DOE实验设计找到最优参数组合，将缺陷率降至目标值以下。 ","approach":["定义阶段：锁定A型产品焊接气孔缺陷，目标从4.2%降至1.0%以下","测量阶段：收集连续30天生产数据，进行测量系统分析（MSA），GR&R=9.8%","分析阶段：鱼骨图+FMEA识别6个潜在关键因子，通过假设检验筛选出3个显著因子","改善阶段：对焊接电流、气体流量、焊接速度进行3因子2水平DOE，确定最优参数组合","验证阶段：连续20天验证生产，Cpk从0.78提升至1.42","控制阶段：更新PFMEA和控制计划，关键参数纳入SPC在线监控"],"results":[{"num":"4.2%","label":"缺陷率变化"},{"num":"1.42","label":"过程能力Cpk"},{"num":"¥95万","label":"年质量损失减少"}]},{"id":5,"title":"注塑车间自动上料系统改造","category":"headcount","categoryName":"人数优化","company":"华东制造基地 · 注塑车间","level":"绿带","date":"2026-03","tags":["自动化","注塑","供料系统","少人化"],"cover":"https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&h=500&fit=crop","images":[],"summary":"注塑车间12台注塑机上料依赖人工搬运，每班次3名工人专职上料，劳动强度大且存在物料混料风险。通过引入集中供料自动化系统，实现少人化运行。 ","approach":["需求分析：12台注塑机日耗料量3.6吨，人工搬运距离平均60米/次","方案设计：设计中央供料站+管道输送方案，12台机分区供料","设备选型：选用真空吸料机+不锈钢管道+中央控制柜","防错设计：不同原料管道颜色区分，接头防呆设计杜绝混料","调试优化：分3阶段调试，逐台接入验证供料稳定性","人员转岗：原3名上料工转岗至设备维护和品质检查岗位"],"results":[{"num":"3→0","label":"上料人员"},{"num":"0","label":"混料事故"},{"num":"¥52万","label":"年人工节约"}]},{"id":6,"title":"车间通道安全改善与防撞系统","category":"utilities","categoryName":"水电气","company":"华南工业园 · 物流部","level":"黄带","date":"2026-01","tags":["目视化","安全","叉车防撞","人车分流"],"cover":"https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=500&fit=crop","images":[],"summary":"车间内叉车与行人通道交叉，近一年发生3起轻微碰撞事故。通过人车分流设计、防撞预警系统和安全目视化，系统提升车间本质安全水平。 ","approach":["风险识别：绘制车间人车流动热力图，标记7处高风险交叉点","通道改造：重新规划行人通道与叉车通道，物理隔离实现人车分流","智能防撞：叉车安装超声波防撞传感器+蜂鸣报警，检测2米内行人自动报警","目视化：地面施划黄黑斑马线、安全警示标语、凸面镜设置在盲区转角","限速管理：叉车安装限速器，厂区内限速8km/h，超速自动记录","培训考核：全员安全培训+叉车司机专项考核，建立安全积分制度"],"results":[{"num":"0","label":"碰撞事故（改善后）"},{"num":"7→0","label":"高风险交叉点"},{"num":"100%","label":"叉车限速合规率"}]},{"id":7,"title":"机加工车间刀具管理系统改善","category":"spare_parts","categoryName":"备件","company":"华北制造基地 · 机加工车间","level":"黄带","date":"2026-03","tags":["目视化","刀具管理","降本","寿命管理"],"cover":"https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=800&h=500&fit=crop","images":[],"summary":"机加工车间刀具年消耗费用达280万元，存在过早更换、刀具丢失、领用混乱等问题。通过建立刀具寿命管理系统和领用规范，实现刀具成本有效管控。 ","approach":["现状摸底：盘点在库刀具种类87种，过期更换率高达35%","寿命管理：建立刀具使用寿命数据库，按加工材质和参数设定寿命基准","预警机制：刀具使用次数达寿命80%时系统黄灯预警，95%红灯强制更换","领用规范：实施\"以旧换新\"领用制度，旧刀回收验证后方可领新刀","修磨再利用：可修磨刀具建立修磨台账，平均修磨3次再报废","目视化柜：引入智能刀具柜，刷卡领用，自动记录使用人和刀具编号"],"results":[{"num":"18%","label":"刀具年消耗 -"},{"num":"35%","label":"过早更换率"},{"num":"¥50万","label":"年节约金额"}]},{"id":8,"title":"成品仓库布局优化与拣货效率提升","category":"indirect_staff","categoryName":"间接人员","company":"西南基地 · 仓储部","level":"绿带","date":"2026-02","tags":["仓储优化","ABC分类","拣货路径","WMS"],"cover":"https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=500&fit=crop","images":[],"summary":"成品仓库面积5000㎡，SKU超过800种，日均拣货单量300+。原有布局导致拣货路径冗长、找货耗时大。通过ABC分类重构布局，优化拣货路径，提升出入库效率。 ","approach":["数据分析：提取12个月出库数据，按ABC分类法将SKU分为A(20%)/B(30%)/C(50%)三类","布局重构：A类品移至靠近出货口的黄金区域，C类品移至后方高位货架","储位优化：引入动态储位管理，A类品储位间距加大提升周转效率","路径优化：用S型路径算法替代原有自由拣货模式，减少重复行走","WMS升级：系统自动推荐最优拣货路径，PDA扫码指引防错","看板管理：设置出入库效率看板，实时监控拣货时效"],"results":[{"num":"35%","label":"平均拣货时间 -"},{"num":"28%","label":"出入库效率 +"},{"num":"18%","label":"行走距离 -"}]},{"id":9,"title":"装配线节拍平衡与瓶颈消除","category":"hours","categoryName":"工时优化","company":"华东制造基地 · 总装二厂","level":"绿带","date":"2026-01","tags":["线平衡","瓶颈消除","工时分析","产能提升"],"cover":"https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=500&fit=crop","images":[],"summary":"总装二厂B线节拍不平衡，线平衡率仅72%，第4工位为瓶颈工位，制约整体产能。通过工时分析和作业重组，消除瓶颈提升线平衡率。 ","approach":["工时测量：对8个工位连续3天秒表测时，每工位采集50组数据","瓶颈分析：第4工位CT=58秒（瓶颈），线平衡率72%，节拍45秒","作业拆分：将第4工位3项作业中的\"线束安装\"拆分至第3工位和第5工位","工装改善：第6工位增加助力臂，作业时间从52秒降至44秒","并行作业：第7工位2人并行作业改为交替式作业，消除等待","标准作业：更新各工位标准作业指导书，设定标准节拍45秒"],"results":[{"num":"72%","label":"线平衡率"},{"num":"18%","label":"日产能提升 +"},{"num":"58→45s","label":"瓶颈工时"}]},{"id":10,"title":"表面处理车间废气收集系统改善","category":"utilities","categoryName":"水电气","company":"华南工业园 · 表面处理部","level":"绿带","date":"2026-02","tags":["环保安全","废气治理","职业健康","通风系统"],"cover":"https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=500&fit=crop","images":[],"summary":"表面处理车间酸雾废气收集效率低，车间内刺激性气味明显，职业健康检测结果部分指标接近限值。通过改善通风系统和废气处理设施，提升车间环境质量。 ","approach":["检测评估：委托第三方检测车间内3个点位空气质量，2项指标超标","槽边排风：在4个酸洗槽增加槽边侧吸罩，排风量提升至设计值的95%","管道改造：更换老化排风管道，减少漏风率从15%降至3%","洗涤塔升级：碱液喷淋塔增加填料层，净化效率从78%提升至92%","自动加药：pH在线监测+自动加碱系统，确保洗涤液碱度稳定","定期监测：建立月度空气质量检测制度，数据上墙公示"],"results":[{"num":"达标","label":"职业健康指标"},{"num":"92%","label":"废气净化效率"},{"num":"0","label":"员工异味投诉"}]},{"id":11,"title":"AGV智能物流配送系统导入","category":"headcount","categoryName":"人数优化","company":"西南基地 · 生产管理部","level":"黑带","date":"2026-03","tags":["少人化","AGV","智能物流","自动配送"],"cover":"https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&h=500&fit=crop","images":[],"summary":"车间线边物料配送依赖人工叉车+手推车，配送不及时导致线边缺料停线年均38小时。导入8台AGV实现物料自动配送，与MES系统联动实现按需配送。 ","approach":["路径规划：绘制车间物流动线图，规划4条AGV运行路线，避免人车混行","系统对接：AGV调度系统与MES/WMS对接，订单触发自动生成配送任务","站点设计：在12个线边工位设置AGV停靠点，自动呼叫补料","分阶段导入：先1条线试点2台AGV验证稳定性，再扩展至全车间8台","安全机制：AGV配备激光雷达+急停按钮，遇人自动减速停车","异常处理：AGV故障时系统自动切换人工配送模式，保障生产不中断"],"results":[{"num":"","label":"AGV投用 8台"},{"num":"38→4h","label":"年缺料停线"},{"num":"6→2","label":"配送人员"}]},{"id":12,"title":"供应商来料检验流程优化","category":"auxiliary","categoryName":"辅料","company":"华北制造基地 · 品质保证部","level":"黄带","date":"2026-01","tags":["流程优化","IQC","来料检验","免检机制"],"cover":"https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop","images":[],"summary":"来料检验周期平均2.5天，影响生产排程。通过对供应商分级管理、建立免检机制和检验流程优化，缩短来料检验周期，提升供应链响应速度。 ","approach":["数据分析：统计年度来料检验数据，A类供应商合格率99.2%但全检耗时大","供应商分级：按历史质量表现将供应商分为A/B/C三级，差异化检验策略","免检机制：A级供应商连续6个月批次合格率>99%可申请免检，转为定期稽核","抽样优化：B类供应商从全检调整为AQL抽检，抽样比例降低50%","检验前移：推动3家关键供应商实施出货前检验（OS），问题在源头拦截","信息化：IQC检验结果电子化，与ERP联动，合格自动放行入库"],"results":[{"num":"2.5","label":"平均检验周期"},{"num":"60%","label":"A类供应商免检率"},{"num":"15%","label":"来料周转效率 +"}]},{"id":13,"title":"测试项目","category":"yield","categoryName":"良率改善","company":"华工正源","level":"绿带","date":"2026-09","tags":["六西格玛","DOE","过程能力","自动化","瓶颈消除","产能提升","废气治理"],"cover":"https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop","images":[],"summary":"测试123 ","approach":["测试123"],"results":[{"num":"","label":"测试123"}]},{"id":14,"title":"测试项目2","category":"yield","categoryName":"良率改善","company":"华工图像","level":"黄带","date":"2026-03","tags":["现场改善","快速换模","OEE"],"cover":"https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=500&fit=crop","images":[],"summary":"测试456 ","approach":["测试456"],"results":[{"num":"","label":"测试456"}]},{"id":15,"title":"测试项目3","category":"yield","categoryName":"良率改善","company":"华工正源","level":"黄带","date":"2026-03","tags":["现场改善","快速换模","OEE"],"cover":"https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=500&fit=crop","images":[],"summary":"测试456 ","approach":["测试456"],"results":[{"num":"","label":"测试456"}]}];
+// ===== 数据结束 =====
+
+(function () {
+    "use strict";
+    function getParam(name) {
+        var url = window.location.search;
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = url.substr(1).match(reg);
+        return r != null ? decodeURIComponent(r[2]) : null;
+    }
+
+    var categoryCode = getParam("cat") || "all";
+    var caseGrid = document.getElementById("caseGrid");
+    var noResult = document.getElementById("noResult");
+    var modalOverlay = document.getElementById("modalOverlay");
+    var modalBody = document.getElementById("modalBody");
+    var modalClose = document.getElementById("modalClose");
+    var backTop = document.getElementById("backTop");
+    var menuToggle = document.getElementById("menuToggle");
+    var mainNav = document.getElementById("mainNav");
+
+    var categoryName = (CATEGORY_MAP && CATEGORY_MAP[categoryCode]) ? CATEGORY_MAP[categoryCode] : "全部案例";
+    document.getElementById("categoryTitle").textContent = categoryName;
+    document.title = categoryName + " - 华工科技精益改善";
+
+    function renderCases(filter) {
+        var html = "", count = 0;
+        CASES.forEach(function (c) {
+            if (filter === "all" || c.category === filter) {
+                html += '<div class="simple-case-card" data-id="' + c.id + '">'
+                    + '<div class="simple-case-img"><img src="' + c.cover + '" alt="' + c.title + '" loading="lazy" onerror="this.src=\'https://via.placeholder.com/600x400/0052cc/ffffff?text=HPS\'"></div>'
+                    + '<div class="simple-case-info"><div class="simple-case-title">' + c.title + '</div><div class="simple-case-company">' + c.company + '</div></div></div>';
+                count++;
+            }
+        });
+        caseGrid.innerHTML = html;
+        noResult.style.display = count === 0 ? "block" : "none";
+        document.querySelectorAll(".simple-case-card").forEach(function (card) {
+            card.addEventListener("click", function () { openModal(parseInt(this.getAttribute("data-id"))); });
+        });
+    }
+
+    function openModal(id) {
+        var c = CASES.find(function (x) { return x.id === id; });
+        if (!c) return;
+        var html = '<div class="detail-hero"><img src="' + c.cover + '" alt="' + c.title + '" onerror="this.src=\'https://via.placeholder.com/800x400/0052cc/ffffff?text=HPS\'"><span class="detail-badge">' + c.categoryName + '</span></div>'
+            + '<div class="detail-content"><h2 class="detail-title">' + c.title + '</h2>'
+            + '<div class="detail-meta"><span>' + c.company + '</span><span>🏅 ' + c.level + '</span><span>📅 ' + c.date + '</span></div>'
+            + '<div class="detail-tags">' + c.tags.map(function(t){return '<span class="case-tag">'+t+'</span>';}).join('') + '</div>'
+            + '<div class="detail-section"><h3>项目简介</h3><p>' + c.summary + '</p></div>'
+            + '<div class="detail-section"><h3>改善思路与实施步骤</h3><ul>' + c.approach.map(function(a){return '<li>'+a+'</li>';}).join('') + '</ul></div>'
+            + '<div class="detail-section"><h3>落地成果</h3><div class="detail-results">'
+            + c.results.map(function(r){return '<div class="detail-result-card"><div class="detail-result-num">'+r.num+'</div><div class="detail-result-label">'+r.label+'</div></div>';}).join('')
+            + '</div></div></div>';
+        modalBody.innerHTML = html;
+        modalOverlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() { modalOverlay.classList.remove("open"); document.body.style.overflow = ""; }
+    if (modalClose) modalClose.addEventListener("click", closeModal);
+    if (modalOverlay) modalOverlay.addEventListener("click", function(e){ if(e.target===modalOverlay) closeModal(); });
+    document.addEventListener("keydown", function(e){ if(e.key==="Escape"&&modalOverlay.classList.contains("open")) closeModal(); });
+
+    if (menuToggle) menuToggle.addEventListener("click", function(){ menuToggle.classList.toggle("open"); mainNav.classList.toggle("open"); });
+    document.querySelectorAll(".nav-link").forEach(function(link){ link.addEventListener("click", function(){ menuToggle.classList.remove("open"); mainNav.classList.remove("open"); }); });
+
+    window.addEventListener("scroll", function(){ backTop.classList.toggle("show", window.scrollY > 400); });
+    if (backTop) backTop.addEventListener("click", function(){ window.scrollTo({top:0,behavior:"smooth"}); });
+
+    renderCases(categoryCode);
+})();
+</script>
+</body>
+</html>
