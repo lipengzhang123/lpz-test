@@ -112,11 +112,35 @@
             counts.all++;
             if (counts[c.category] !== undefined) counts[c.category]++;
         });
+
+        // 旧版 ID（兼容保留）
         var map = { all: "countAll", yield: "countYield", substitute: "countSubstitute", reduce: "countReduce", headcount: "countHeadcount", hours: "countHours", utilities: "countUtilities", auxiliary: "countAuxiliary", spare_parts: "countSpareParts", indirect_staff: "countIndirectStaff" };
         for (var key in map) {
             var el = document.getElementById(map[key]);
             if (el) el.textContent = counts[key];
         }
+
+        // 新版 PC 卡片徽章
+        var pcMap = { yield: "pillYield", substitute: "pillSubstitute", reduce: "pillReduce", headcount: "pillHeadcount", hours: "pillHours", utilities: "pillUtilities", auxiliary: "pillAuxiliary", spare_parts: "pillSpareParts", indirect_staff: "pillIndirectStaff" };
+        for (var k in pcMap) {
+            var pel = document.getElementById(pcMap[k]);
+            if (pel) pel.textContent = "案例数 " + counts[k];
+        }
+
+        // 新版移动端手风琴徽章
+        var mobMap = { yield: "mobilePillYield", substitute: "mobilePillSubstitute", reduce: "mobilePillReduce", headcount: "mobilePillHeadcount", hours: "mobilePillHours", utilities: "mobilePillUtilities", auxiliary: "mobilePillAuxiliary", spare_parts: "mobilePillSpareParts", indirect_staff: "mobilePillIndirectStaff" };
+        for (var m in mobMap) {
+            var mel = document.getElementById(mobMap[m]);
+            if (mel) mel.textContent = "案例数 " + counts[m];
+        }
+
+        // 移动端分组汇总
+        var matEl = document.getElementById("mobileCountMaterial");
+        if (matEl) matEl.textContent = counts.yield + counts.substitute + counts.reduce;
+        var labEl = document.getElementById("mobileCountLabor");
+        if (labEl) labEl.textContent = counts.headcount + counts.hours;
+        var ovhEl = document.getElementById("mobileCountOverhead");
+        if (ovhEl) ovhEl.textContent = counts.utilities + counts.auxiliary + counts.spare_parts + counts.indirect_staff;
     }
 
     /* ---------- 4. 筛选逻辑 ---------- */
@@ -269,13 +293,37 @@
         });
     });
 
-    /* ---------- 9. 初始化 ---------- */
+    /* ---------- 9. 手风琴折叠切换 ---------- */
+    window.toggleAccordion = function (btn) {
+        var item = btn.closest(".accordion-item");
+        if (!item) return;
+        var isOpen = item.getAttribute("data-open") === "true";
+        item.setAttribute("data-open", isOpen ? "false" : "true");
+    };
+
+    /* ---------- 10. 点击分类卡片筛选 ---------- */
+    window.filterByCategory = function (category) {
+        // 更新筛选标签高亮
+        var tags = document.querySelectorAll(".filter-tag");
+        tags.forEach(function (tag) {
+            tag.classList.toggle("active", tag.getAttribute("data-filter") === category);
+        });
+        currentFilter = category;
+        renderCases(category);
+        // 滚动到案例区
+        var casesSection = document.getElementById("cases");
+        if (casesSection) {
+            casesSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    };
+
+    /* ---------- 11. 初始化 ---------- */
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
     window.scrollToTop = scrollToTop;
 
-    console.log("main.js v3 loaded, CASES length:", CASES.length);
+    console.log("main.js v4 loaded, CASES length:", CASES.length);
     updateCounts();
     renderCases("all");
 })();
