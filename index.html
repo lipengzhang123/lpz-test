@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>华工科技精益改善 · 案例展示平台</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -69,73 +72,275 @@
 
 <!-- ==================== 项目分类导航 ==================== -->
 <section class="categories-section" id="categories">
+    <!-- 景深光效背景 -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <div class="ambient-glow-3"></div>
+
     <div class="container">
         <div class="section-title">
             <h2>项目分类导航</h2>
             <p>按改善领域快速筛选相关案例</p>
         </div>
-        <div class="category-grid">
-            <!-- 直接材料类改善 -->
-            <div class="category-group-label">一、直接材料类改善</div>
-            <div class="category-card" data-category="yield">
-                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-                <h3>良率改善</h3>
-                <p>提升产品直通率与合格率</p>
-                <span class="cat-count" id="countYield">0</span>
+
+        <!-- PC 视图：三列思维导图式布局 -->
+        <div class="mindmap-root">
+            <div class="root-node">制造成本</div>
+            <div class="root-branches">
+                <div class="branch-line branch-horizontal"></div>
+                <div class="branch-vline branch-vline-left"></div>
+                <div class="branch-vline branch-vline-center"></div>
+                <div class="branch-vline branch-vline-right"></div>
             </div>
-            <div class="category-card" data-category="substitute">
-                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="8" height="12" rx="1"/><rect x="14" y="6" width="8" height="12" rx="1"/><path d="M10 12h4"/></svg></div>
-                <h3>材料替代</h3>
-                <p>低成本材料替代方案</p>
-                <span class="cat-count" id="countSubstitute">0</span>
-            </div>
-            <div class="category-card" data-category="reduce">
-                <div class="cat-icon">⬇️</div>
-                <h3>用量降低</h3>
-                <p>减少原材料消耗</p>
-                <span class="cat-count" id="countReduce">0</span>
+        </div>
+        <div class="category-grid-pc">
+            <!-- 一级分支 1: 直接材料类改善 -->
+            <div class="pillar-col" id="col-material">
+                <div class="pillar-header">一、直接材料类改善</div>
+                <div class="pillar-cards">
+                    <div class="depth-card" data-category="yield" onclick="window.location.href='category.html?cat=yield'">
+                        <div class="card-bg-gradient bg-yield"></div>
+                        <div class="card-lens lens-yield"></div>
+                        <div class="card-text">
+                            <h3>良率改善</h3>
+                            <p>提升产品直通率与合格率</p>
+                        </div>
+                        <div class="card-icon-wrap icon-yield">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <span class="case-pill" id="pillYield">案例数 0</span>
+                    </div>
+                    <div class="depth-card" data-category="substitute" onclick="window.location.href='category.html?cat=substitute'">
+                        <div class="card-bg-gradient bg-substitute"></div>
+                        <div class="card-lens lens-substitute"></div>
+                        <div class="card-text">
+                            <h3>材料替代</h3>
+                            <p>低成本材料替代方案</p>
+                        </div>
+                        <div class="card-icon-wrap icon-substitute">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="8" height="12" rx="1"/><rect x="14" y="6" width="8" height="12" rx="1"/><path d="M10 12h4"/></svg>
+                        </div>
+                        <span class="case-pill" id="pillSubstitute">案例数 0</span>
+                    </div>
+                    <div class="depth-card" data-category="reduce" onclick="window.location.href='category.html?cat=reduce'">
+                        <div class="card-bg-gradient bg-reduce"></div>
+                        <div class="card-lens lens-reduce"></div>
+                        <div class="card-text">
+                            <h3>用量降低</h3>
+                            <p>减少原材料消耗与损耗</p>
+                        </div>
+                        <div class="card-icon-wrap icon-reduce">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+                        </div>
+                        <span class="case-pill case-pill-zero" id="pillReduce">案例数 0</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- 直接人工类改善 -->
-            <div class="category-group-label">二、直接人工类改善</div>
-            <div class="category-card" data-category="headcount">
-                <div class="cat-icon">👥</div>
-                <h3>人数优化</h3>
-                <p>少人化与岗位精简</p>
-                <span class="cat-count" id="countHeadcount">0</span>
-            </div>
-            <div class="category-card" data-category="hours">
-                <div class="cat-icon">⏱️</div>
-                <h3>工时优化</h3>
-                <p>缩短作业时间与节拍平衡</p>
-                <span class="cat-count" id="countHours">0</span>
+            <!-- 一级分支 2: 直接人工类改善 -->
+            <div class="pillar-col" id="col-labor">
+                <div class="pillar-header">二、直接人工类改善</div>
+                <div class="pillar-cards">
+                    <div class="depth-card" data-category="headcount" onclick="window.location.href='category.html?cat=headcount'">
+                        <div class="card-bg-gradient bg-headcount"></div>
+                        <div class="card-lens lens-headcount"></div>
+                        <div class="card-text">
+                            <h3>人数优化</h3>
+                            <p>少人化与岗位精简</p>
+                        </div>
+                        <div class="card-icon-wrap icon-headcount">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <span class="case-pill" id="pillHeadcount">案例数 0</span>
+                    </div>
+                    <div class="depth-card" data-category="hours" onclick="window.location.href='category.html?cat=hours'">
+                        <div class="card-bg-gradient bg-hours"></div>
+                        <div class="card-lens lens-hours"></div>
+                        <div class="card-text">
+                            <h3>工时优化</h3>
+                            <p>缩短作业时间与节拍平衡</p>
+                        </div>
+                        <div class="card-icon-wrap icon-hours">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <span class="case-pill" id="pillHours">案例数 0</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- 制造费用类改善 -->
-            <div class="category-group-label">三、制造费用类改善</div>
-            <div class="category-card" data-category="utilities">
-                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-                <h3>水电气</h3>
-                <p>能源消耗管控与节能</p>
-                <span class="cat-count" id="countUtilities">0</span>
+            <!-- 一级分支 3: 制造费用类改善 -->
+            <div class="pillar-col" id="col-overhead">
+                <div class="pillar-header">三、制造费用类改善</div>
+                <div class="pillar-cards">
+                    <div class="depth-card" data-category="utilities" onclick="window.location.href='category.html?cat=utilities'">
+                        <div class="card-bg-gradient bg-utilities"></div>
+                        <div class="card-lens lens-utilities"></div>
+                        <div class="card-text">
+                            <h3>水电气</h3>
+                            <p>能源消耗管控与智慧节能</p>
+                        </div>
+                        <div class="card-icon-wrap icon-utilities">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <span class="case-pill" id="pillUtilities">案例数 0</span>
+                    </div>
+                    <div class="depth-card" data-category="auxiliary" onclick="window.location.href='category.html?cat=auxiliary'">
+                        <div class="card-bg-gradient bg-auxiliary"></div>
+                        <div class="card-lens lens-auxiliary"></div>
+                        <div class="card-text">
+                            <h3>辅料</h3>
+                            <p>辅助材料降本与定量控制</p>
+                        </div>
+                        <div class="card-icon-wrap icon-auxiliary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                        </div>
+                        <span class="case-pill" id="pillAuxiliary">案例数 0</span>
+                    </div>
+                    <div class="depth-card" data-category="spare_parts" onclick="window.location.href='category.html?cat=spare_parts'">
+                        <div class="card-bg-gradient bg-spare-parts"></div>
+                        <div class="card-lens lens-spare-parts"></div>
+                        <div class="card-text">
+                            <h3>备件</h3>
+                            <p>备品备件寿命周期优化</p>
+                        </div>
+                        <div class="card-icon-wrap icon-spare-parts">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <span class="case-pill" id="pillSpareParts">案例数 0</span>
+                    </div>
+                    <div class="depth-card" data-category="indirect_staff" onclick="window.location.href='category.html?cat=indirect_staff'">
+                        <div class="card-bg-gradient bg-indirect-staff"></div>
+                        <div class="card-lens lens-indirect-staff"></div>
+                        <div class="card-text">
+                            <h3>间接人员</h3>
+                            <p>间接人力与管理配置优化</p>
+                        </div>
+                        <div class="card-icon-wrap icon-indirect-staff">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <span class="case-pill" id="pillIndirectStaff">案例数 0</span>
+                    </div>
+                </div>
             </div>
-            <div class="category-card" data-category="auxiliary">
-                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
-                <h3>辅料</h3>
-                <p>辅助材料降本与管理</p>
-                <span class="cat-count" id="countAuxiliary">0</span>
+        </div>
+
+        <!-- 移动端视图：折叠手风琴 -->
+        <div class="category-accordion-mobile">
+            <!-- Accordion 1: 直接材料类改善 -->
+            <div class="accordion-item" data-open="true">
+                <button class="accordion-toggle" onclick="toggleAccordion(this)" type="button">
+                    <div class="accordion-left">
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div>
+                            <div class="accordion-title">直接材料类改善</div>
+                            <div class="accordion-subtitle">包含 3 个二级领域 · 共 <span id="mobileCountMaterial">0</span> 案例</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="mobile-card" data-category="yield" onclick="filterByCategory('yield')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">良率改善</div>
+                            <div class="mobile-card-desc">提升产品直通率与合格率</div>
+                        </div>
+                        <span class="mobile-case-pill" id="mobilePillYield">案例数 0</span>
+                    </div>
+                    <div class="mobile-card" data-category="substitute" onclick="filterByCategory('substitute')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">材料替代</div>
+                            <div class="mobile-card-desc">低成本材料替代方案</div>
+                        </div>
+                        <span class="mobile-case-pill" id="mobilePillSubstitute">案例数 0</span>
+                    </div>
+                    <div class="mobile-card" data-category="reduce" onclick="filterByCategory('reduce')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">用量降低</div>
+                            <div class="mobile-card-desc">减少原材料消耗与损耗</div>
+                        </div>
+                        <span class="mobile-case-pill mobile-case-pill-zero" id="mobilePillReduce">案例数 0</span>
+                    </div>
+                </div>
             </div>
-            <div class="category-card" data-category="spare_parts">
-                <div class="cat-icon">🔧</div>
-                <h3>备件</h3>
-                <p>备品备件寿命管理</p>
-                <span class="cat-count" id="countSpareParts">0</span>
+
+            <!-- Accordion 2: 直接人工类改善 -->
+            <div class="accordion-item" data-open="true">
+                <button class="accordion-toggle" onclick="toggleAccordion(this)" type="button">
+                    <div class="accordion-left">
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <div class="accordion-title">直接人工类改善</div>
+                            <div class="accordion-subtitle">包含 2 个二级领域 · 共 <span id="mobileCountLabor">0</span> 案例</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="mobile-card" data-category="headcount" onclick="filterByCategory('headcount')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">人数优化</div>
+                            <div class="mobile-card-desc">少人化与岗位工序精简</div>
+                        </div>
+                        <span class="mobile-case-pill" id="mobilePillHeadcount">案例数 0</span>
+                    </div>
+                    <div class="mobile-card" data-category="hours" onclick="filterByCategory('hours')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">工时优化</div>
+                            <div class="mobile-card-desc">缩短作业时间与节拍平衡</div>
+                        </div>
+                        <span class="mobile-case-pill" id="mobilePillHours">案例数 0</span>
+                    </div>
+                </div>
             </div>
-            <div class="category-card" data-category="indirect_staff">
-                <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                <h3>间接人员</h3>
-                <p>间接人力配置优化</p>
-                <span class="cat-count" id="countIndirectStaff">0</span>
+
+            <!-- Accordion 3: 制造费用类改善 -->
+            <div class="accordion-item" data-open="true">
+                <button class="accordion-toggle" onclick="toggleAccordion(this)" type="button">
+                    <div class="accordion-left">
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div>
+                            <div class="accordion-title">制造费用类改善</div>
+                            <div class="accordion-subtitle">包含 4 个二级领域 · 共 <span id="mobileCountOverhead">0</span> 案例</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="mobile-card" data-category="utilities" onclick="filterByCategory('utilities')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">水电气</div>
+                            <div class="mobile-card-desc">能源消耗管控与智慧节能</div>
+                        </div>
+                        <span class="mobile-case-pill" id="mobilePillUtilities">案例数 0</span>
+                    </div>
+                    <div class="mobile-card" data-category="auxiliary" onclick="filterByCategory('auxiliary')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">辅料</div>
+                            <div class="mobile-card-desc">辅助材料降本与定量控制</div>
+                        </div>
+                        <span class="mobile-case-pill" id="mobilePillAuxiliary">案例数 0</span>
+                    </div>
+                    <div class="mobile-card" data-category="spare_parts" onclick="filterByCategory('spare_parts')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">备件</div>
+                            <div class="mobile-card-desc">备品备件寿命周期优化</div>
+                        </div>
+                        <span class="mobile-case-pill" id="mobilePillSpareParts">案例数 0</span>
+                    </div>
+                    <div class="mobile-card" data-category="indirect_staff" onclick="filterByCategory('indirect_staff')">
+                        <div class="mobile-card-text">
+                            <div class="mobile-card-title">间接人员</div>
+                            <div class="mobile-card-desc">间接人力与管理配置优化</div>
+                        </div>
+                        <span class="mobile-case-pill" id="mobilePillIndirectStaff">案例数 0</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
