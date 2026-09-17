@@ -1,0 +1,446 @@
+[
+  {
+    "id": 1,
+    "title": "装配车间5S目视化标杆打造",
+    "category": "yield",
+    "categoryName": "良率改善",
+    "company": "华工图像",
+    "level": "黄带",
+    "date": "2026-03",
+    "tags": [
+      "5S",
+      "目视化",
+      "定置管理",
+      "现场改善"
+    ],
+    "cover": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop",
+    "images": [],
+    "summary": "总装一厂装配线区域物料摆放混乱、工具寻找耗时严重，平均每班次浪费在寻找工具和物料上的时间达45分钟。通过系统性推行5S管理，建立目视化标准，实现现场\"一眼可见、一秒可取\"的改善目标。 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "68%",
+        "label": "工具寻找时间减少"
+      },
+      {
+        "num": "45→8min",
+        "label": "每班次浪费时间"
+      },
+      {
+        "num": "1.2t",
+        "label": "呆滞物料清除"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "冲压产线换模时间SMED改善",
+    "category": "hours",
+    "categoryName": "工时优化",
+    "company": "华南工业园 · 冲压车间",
+    "level": "绿带",
+    "date": "2026-02",
+    "tags": [
+      "SMED",
+      "快速换模",
+      "OEE",
+      "流程优化"
+    ],
+    "cover": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&h=500&fit=crop",
+    "images": [],
+    "summary": "冲压线换模平均耗时38分钟，严重影响小批量多品种订单的交付能力。项目组运用SMED方法，将内部作业转化为外部作业，实现换模时间大幅压缩。 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "63%",
+        "label": "换模时间缩短"
+      },
+      {
+        "num": "38→14min",
+        "label": "平均换模时间"
+      },
+      {
+        "num": "12%",
+        "label": "OEE提升 +"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "包装材料成本削减项目",
+    "category": "substitute",
+    "categoryName": "材料替代",
+    "company": "西南基地 · 包装事业部",
+    "level": "绿带",
+    "date": "2026-01",
+    "tags": [
+      "降本增效",
+      "包装优化",
+      "VAVE",
+      "供应链"
+    ],
+    "cover": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=500&fit=crop",
+    "images": [],
+    "summary": "年度包装材料采购成本占比达产品成本的8.3%，高于行业平均水平。通过VAVE分析、材料替代和供应商整合，系统性削减包装成本。 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "¥186万",
+        "label": "年化降本金额"
+      },
+      {
+        "num": "22%",
+        "label": "包材成本占比 -"
+      },
+      {
+        "num": "8.3%",
+        "label": "成本占比变化"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "注塑车间自动上料系统改造",
+    "category": "headcount",
+    "categoryName": "人数优化",
+    "company": "华东制造基地 · 注塑车间",
+    "level": "绿带",
+    "date": "2026-03",
+    "tags": [
+      "自动化",
+      "注塑",
+      "供料系统",
+      "少人化"
+    ],
+    "cover": "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&h=500&fit=crop",
+    "images": [],
+    "summary": "注塑车间12台注塑机上料依赖人工搬运，每班次3名工人专职上料，劳动强度大且存在物料混料风险。通过引入集中供料自动化系统，实现少人化运行。 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "3→0",
+        "label": "上料人员"
+      },
+      {
+        "num": "0",
+        "label": "混料事故"
+      },
+      {
+        "num": "¥52万",
+        "label": "年人工节约"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "车间通道安全改善与防撞系统",
+    "category": "utilities",
+    "categoryName": "水电气",
+    "company": "华南工业园 · 物流部",
+    "level": "黄带",
+    "date": "2026-01",
+    "tags": [
+      "目视化",
+      "安全",
+      "叉车防撞",
+      "人车分流"
+    ],
+    "cover": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=500&fit=crop",
+    "images": [],
+    "summary": "车间内叉车与行人通道交叉，近一年发生3起轻微碰撞事故。通过人车分流设计、防撞预警系统和安全目视化，系统提升车间本质安全水平。 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "0",
+        "label": "碰撞事故（改善后）"
+      },
+      {
+        "num": "7→0",
+        "label": "高风险交叉点"
+      },
+      {
+        "num": "100%",
+        "label": "叉车限速合规率"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "机加工车间刀具管理系统改善",
+    "category": "spare_parts",
+    "categoryName": "备件",
+    "company": "华北制造基地 · 机加工车间",
+    "level": "黄带",
+    "date": "2026-03",
+    "tags": [
+      "目视化",
+      "刀具管理",
+      "降本",
+      "寿命管理"
+    ],
+    "cover": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=800&h=500&fit=crop",
+    "images": [],
+    "summary": "机加工车间刀具年消耗费用达280万元，存在过早更换、刀具丢失、领用混乱等问题。通过建立刀具寿命管理系统和领用规范，实现刀具成本有效管控。 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "18%",
+        "label": "刀具年消耗 -"
+      },
+      {
+        "num": "35%",
+        "label": "过早更换率"
+      },
+      {
+        "num": "¥50万",
+        "label": "年节约金额"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "成品仓库布局优化与拣货效率提升",
+    "category": "indirect_staff",
+    "categoryName": "间接人员",
+    "company": "西南基地 · 仓储部",
+    "level": "绿带",
+    "date": "2026-02",
+    "tags": [
+      "仓储优化",
+      "ABC分类",
+      "拣货路径",
+      "WMS"
+    ],
+    "cover": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=500&fit=crop",
+    "images": [],
+    "summary": "成品仓库面积5000㎡，SKU超过800种，日均拣货单量300+。原有布局导致拣货路径冗长、找货耗时大。通过ABC分类重构布局，优化拣货路径，提升出入库效率。 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "35%",
+        "label": "平均拣货时间 -"
+      },
+      {
+        "num": "28%",
+        "label": "出入库效率 +"
+      },
+      {
+        "num": "18%",
+        "label": "行走距离 -"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "供应商来料检验流程优化",
+    "category": "auxiliary",
+    "categoryName": "辅料",
+    "company": "华北制造基地 · 品质保证部",
+    "level": "黄带",
+    "date": "2026-01",
+    "tags": [
+      "流程优化",
+      "IQC",
+      "来料检验",
+      "免检机制"
+    ],
+    "cover": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop",
+    "images": [],
+    "summary": "来料检验周期平均2.5天，影响生产排程。通过对供应商分级管理、建立免检机制和检验流程优化，缩短来料检验周期，提升供应链响应速度。 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "2.5",
+        "label": "平均检验周期"
+      },
+      {
+        "num": "60%",
+        "label": "A类供应商免检率"
+      },
+      {
+        "num": "15%",
+        "label": "来料周转效率 +"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "热固不良",
+    "category": "yield",
+    "categoryName": "良率改善",
+    "company": "高理PTC",
+    "level": "绿带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "https://img.remit.ee/i/nueTHc6e9pVx",
+    "images": [],
+    "summary": "达因笔测试铝电极表面不合格  ，注塑电极片表面油污 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "0",
+        "label": "不良率降至"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "原材料成本高",
+    "category": "substitute",
+    "categoryName": "材料替代",
+    "company": "高理感知",
+    "level": "绿带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "",
+    "images": [],
+    "summary": "引线原材料议价能力不足 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "60万",
+        "label": "预计全年降本收益可达"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "环氧胶在实际领用量较多",
+    "category": "reduce",
+    "categoryName": "用量降低",
+    "company": "高理感知",
+    "level": "黑带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "",
+    "images": [],
+    "summary": "包装、设备、容器残留占比81%，手工作业浪费13%，管理浪费 6% ",
+    "approach": [],
+    "results": [
+      {
+        "num": "0",
+        "label": "单支用量环比2"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "工艺流程复杂",
+    "category": "headcount",
+    "categoryName": "人数优化",
+    "company": "高理PTC",
+    "level": "黑带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "",
+    "images": [],
+    "summary": "产品设计端需要夹具完成灌胶等工序 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "",
+        "label": "工序优化8项，节约人员超18名"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "线体及工位设计问题",
+    "category": "hours",
+    "categoryName": "工时优化",
+    "company": "高理PTC",
+    "level": "黑带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "",
+    "images": [],
+    "summary": "一字型排线搬运浪费较大，半成品及工装堆积 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "5%",
+        "label": "节约人员超5人，UPPH提升超"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "开机数量多，烘干时间长",
+    "category": "utilities",
+    "categoryName": "水电气",
+    "company": "高理感知",
+    "level": "黑带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "",
+    "images": [],
+    "summary": "烘车层数低，烘车底板结构导致空气不流动 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "51万",
+        "label": "节省电费"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "开灯电费高",
+    "category": "utilities",
+    "categoryName": "水电气",
+    "company": "激光精密",
+    "level": "绿带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "",
+    "images": [],
+    "summary": "厂区搬迁以来，照明设备老化、能效低下，导致能耗成本攀升，且维护更换频繁，推高了运营成本。  照明灯故障率高达30~40%灯寿命/节能/亮度指标均不达标 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "1.3万",
+        "label": "安装光伏面积为"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "设备能耗偏高",
+    "category": "utilities",
+    "categoryName": "水电气",
+    "company": "武汉图像",
+    "level": "绿带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "",
+    "images": [],
+    "summary": "设备存在空转情况 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "100.8万",
+        "label": "3月总计开工22天，总产出"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "辅材费用占比29.5%",
+    "category": "auxiliary",
+    "categoryName": "辅料",
+    "company": "高理感知",
+    "level": "黑带",
+    "date": "2026-03",
+    "tags": [],
+    "cover": "",
+    "images": [],
+    "summary": "辅材使用管控不足 ",
+    "approach": [],
+    "results": [
+      {
+        "num": "142.8万",
+        "label": "累计降本"
+      }
+    ]
+  }
+]
