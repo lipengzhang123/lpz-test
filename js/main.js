@@ -194,28 +194,38 @@
             + '  <div class="detail-tags">'
             + c.tags.map(function (t) { return '<span class="case-tag">' + t + '</span>'; }).join("")
             + '  </div>'
-            // 项目简介
+            // 问题原因
             + '  <div class="detail-section">'
-            + '    <h3>项目简介</h3>'
+            + '    <h3>问题原因</h3>'
             + '    <p>' + c.summary + '</p>'
             + '  </div>'
-            // 改善思路
+            // 解决思路与措施
             + '  <div class="detail-section">'
-            + '    <h3>改善思路与实施步骤</h3>'
+            + '    <h3>解决思路与措施</h3>'
             + '    <ul>'
-            + c.approach.map(function (a) { return '<li>' + a + '</li>'; }).join("")
+            + c.approach.map(function (a) {
+                // 解析markdown中的imagetour.lim图片URL并渲染为<img>
+                // 支持两种格式：1) Markdown链接 [url](url)  2) 裸URL https://...
+                var parts = a.split(/(\[https?:\/\/[^\]]+\]\(https?:\/\/[^)]+\.(?:png|jpg|jpeg|gif|webp)\)|https?:\/\/[^\s]+\.(?:png|jpg|jpeg|gif|webp))/gi);
+                return '<li>' + parts.map(function (p) {
+                    if (/^https?:\/\/[^\s]+\.(?:png|jpg|jpeg|gif|webp)/i.test(p)) {
+                        return '<br><img src="' + p + '" alt="实施步骤配图" style="max-width:100%;margin:8px 0;border-radius:4px;" onerror="this.style.display=\'none\'">';
+                    }
+                    // Markdown链接格式 [url](url) → 提取URL
+                    var mdMatch = p.match(/^\[(https?:\/\/[^\]]+\.(?:png|jpg|jpeg|gif|webp))\]\((https?:\/\/[^\)]+\.(?:png|jpg|jpeg|gif|webp))\)$/i);
+                    if (mdMatch) {
+                        return '<br><img src="' + mdMatch[1] + '" alt="实施步骤配图" style="max-width:100%;margin:8px 0;border-radius:4px;" onerror="this.style.display=\'none\'">';
+                    }
+                    // Markdown加粗 **text** → <strong>text</strong>
+                    p = p.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+                    return p;
+                }).join("") + '</li>';
+            }).join("")
             + '    </ul>'
             + '  </div>'
-            // 项目实拍图
+            // 项目成果
             + '  <div class="detail-section">'
-            + '    <h3>项目实拍图</h3>'
-            + '    <div class="detail-images">'
-            + c.images.map(function (src) { return '<img src="' + src + '" alt="项目实拍" onerror="this.src=\'https://via.placeholder.com/600x400/e4e9ed/5a6b7d?text=实拍图\'">'; }).join("")
-            + '    </div>'
-            + '  </div>'
-            // 落地成果
-            + '  <div class="detail-section">'
-            + '    <h3>落地成果</h3>'
+            + '    <h3>项目成果</h3>'
             + '    <div class="detail-results">'
             + c.results.map(function (r) {
                 return '<div class="detail-result-card"><div class="detail-result-num">' + r.num + '</div><div class="detail-result-label">' + r.label + '</div></div>';
