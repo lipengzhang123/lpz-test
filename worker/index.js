@@ -25,7 +25,7 @@ export default {
     // 【关键】GitHub Pages 静态资源代理（必须在 API 路由之前）
     if (pathname === '/' || pathname === '' || pathname === '/v2' || pathname === '/v3' ||
         pathname.startsWith('/css/') || pathname.startsWith('/js/') || 
-        pathname.startsWith('/assets/') || pathname.endsWith('.html')) {
+        pathname.startsWith('/assets/') || pathname.startsWith('/data/') || pathname.endsWith('.html')) {
       // /v2 → category_v2.html, /v3 → index.html (未来扩展), 其他保持原样
       let ghPath = pathname;
       if (pathname === '/v2') {
@@ -219,27 +219,12 @@ async function handleCasesRealtime(request, env, token) {
     const size = parseInt(url.searchParams.get('size') || '20');
     const tag = url.searchParams.get('tag') || '';
 
-    // 【新增】从Cookie读取Session获取operatorId
-    let operatorId = null;
-    const cookie = request.headers.get('Cookie') || '';
-    const match = cookie.match(/sessionId=([^;]+)/);
-    const sessionId = match ? match[1] : null;
-    
-    if (sessionId) {
-      const userJson = await env.DINGTALK_KV.get(`session:${sessionId}`);
-      if (userJson) {
-        try {
-          const userInfo = JSON.parse(userJson);
-          operatorId = userInfo.userid;
-          console.log('[AITable] Found operatorId from session:', operatorId);
-        } catch (e) {
-          console.warn('[AITable] Failed to parse session:', e.message);
-        }
-      }
-    }
+    // 使用环境变量中的OPERATOR_ID（钉钉WebView Cookie不可靠，改用固定operatorId）
+    const operatorId = env.OPERATOR_ID;
+    console.log('[AITable] Using OPERATOR_ID from env:', operatorId);
 
     // 调用钉钉AI表格API查询记录（GET请求，需传入operatorId）
-    const aitableUrl = `https://api.dingtalk.com/v1.0/notable/bases/${env.AITABLE_BASE_ID}/sheets/${env.AITABLE_TABLE_ID}/records${operatorId ? `?operatorId=${encodeURIComponent(operatorId)}` : ''}`;
+    const aitableUrl = `https://api.dingtalk.com/v1.0/notable/bases/${env.AITABLE_BASE_ID}/sheets/${env.AITABLE_TABLE_ID}/records?operatorId=${encodeURIComponent(operatorId)}`;
     const res = await fetch(aitableUrl, {
       method: 'GET',
       headers: {
@@ -264,7 +249,8 @@ async function handleCasesRealtime(request, env, token) {
       hasRecords: !!data.result?.records,
       recordCount: data.result?.records?.length || 0,
       totalCount: data.result?.totalCount,
-      fullResponse: JSON.stringify(data).substring(0, 1000)
+      fullResponse: JSON.stringify(data).substring(0, 1000),
+      operatorId: operatorId
     };
     console.log('[AITable] Debug info:', debugInfo);
 
