@@ -139,8 +139,7 @@ var CASES = []; // 由下方 loadCasesFromBackend() 异步填充
     var titleEl = document.getElementById('categoryTitle');
     var descEl = document.getElementById('categoryDesc');
     if (titleEl) titleEl.textContent = CATEGORY_MAP[categoryCode] || '全部案例';
-    if (descEl) descEl.textContent = '查看' + (CATEGORY_MAP[categoryCode] || '全部') + '的改善案例';
-    
+        
     // 从API加载实时案例数据
     async function loadCasesFromBackend() {
         try {
