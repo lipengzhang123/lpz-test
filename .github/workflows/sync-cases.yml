@@ -1,0 +1,126 @@
+name: Sync DingTalk AI Table Cases
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # 每10分钟执行一次
+  workflow_dispatch:        # 允许手动触发测试
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get Access Token
+        id: get_token
+        run: |
+          TOKEN_RESPONSE=$(curl -s -X POST "https://oapi.dingtalk.com/gettoken" \
+            -H "Content-Type: application/json" \
+            -d "{\"appkey\":\"${{ secrets.DINGTALK_APP_KEY }}\",\"appsecret\":\"${{ secrets.DINGTALK_APP_SECRET }}\"}")
+          
+          ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
+          
+          if [ -z "$ACCESS_TOKEN" ] || [ "$ACCESS_TOKEN" = "null" ]; then
+            echo "Failed to get access token"
+            echo "Response: $TOKEN_RESPONSE"
+            exit 1
+          fi
+          
+          echo "access_token=$ACCESS_TOKEN" >> $GITHUB_OUTPUT
+          echo "Token obtained successfully"
+
+      - name: Fetch AI Table Data
+        id: fetch_data
+        run: |
+          DATA_RESPONSE=$(curl -s -X GET \
+            "https://api.dingtalk.com/v1.0/notable/bases/${{ secrets.DINGTALK_BASE_ID }}/tables/${{ secrets.DINGTALK_TABLE_ID }}/records" \
+            -H "x-acs-dingtalk-access-token: ${{ steps.get_token.outputs.access_token }}" \
+            -H "Content-Type: application/json")
+          
+          RECORD_COUNT=$(echo "$DATA_RESPONSE" | jq '.recordCount // 0')
+          
+          if [ "$RECORD_COUNT" -eq 0 ]; then
+            echo "No records found in AI table"
+            echo "Response: $DATA_RESPONSE"
+            exit 1
+          fi
+          
+          echo "$DATA_RESPONSE" > tmp_raw_data.json
+          echo "Fetched $RECORD_COUNT records"
+
+      - name: Transform Data Format
+        run: |
+          mkdir -p data
+          
+          python3 << 'EOF'
+          import json
+          
+          with open('tmp_raw_data.json', 'r', encoding='utf-8') as f:
+              raw_data = json.load(f)
+          
+          cases = []
+          for record in raw_data.get('data', {}).get('records', []):
+              fields = record.get('fields', {})
+              
+              case = {
+                  'id': str(record.get('recordId', '')),
+                  'title': fields.get('标题', ''),
+                  'category': fields.get('分类代码', ''),
+                  'categoryName': fields.get('分类名称', ''),
+                  'company': fields.get('公司名称', ''),
+                  'level': fields.get('等级', ''),
+                  'date': fields.get('日期', ''),
+                  'tags': fields.get('标签', []),
+                  'cover': fields.get('封面图url', ''),
+                  'images': fields.get('改善措施图片', []),
+                  'summary': fields.get('问题描述', ''),
+                  'approach': fields.get('解决措施及预期效果', []),
+                  'results': []
+              }
+              
+              # 解析结果数据
+              results_text = fields.get('最终成果', '')
+              if results_text and isinstance(results_text, str):
+                  for line in results_text.strip().split('\n'):
+                      if ':' in line or '：' in line:
+                          parts = line.replace('：', ':').split(':', 1)
+                          if len(parts) == 2:
+                              case['results'].append({
+                                  'num': parts[0].strip(),
+                                  'label': parts[1].strip()
+                              })
+              
+              cases.append(case)
+          
+          output = {
+              'errcode': 0,
+              'data': cases
+          }
+          
+          with open('data/cases.json', 'w', encoding='utf-8') as f:
+              json.dump(output, f, ensure_ascii=False, indent=2)
+          
+          print(f"Transformed {len(cases)} cases to data/cases.json")
+          EOF
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          
+          git add data/cases.json
+          
+          if git diff --cached --quiet; then
+            echo "No changes detected, skipping commit"
+            exit 0
+          fi
+          
+          git commit -m "Auto-sync: Update cases from DingTalk AI Table ($(date '+%Y-%m-%d %H:%M:%S'))"
+          git push origin main
+
+      - name: Cleanup
+        if: always()
+        run: rm -f tmp_raw_data.json
