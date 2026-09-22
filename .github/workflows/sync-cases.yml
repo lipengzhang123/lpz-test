@@ -15,9 +15,7 @@ jobs:
       - name: Get Access Token
         id: get_token
         run: |
-          TOKEN_RESPONSE=$(curl -s -X POST "https://oapi.dingtalk.com/gettoken" \
-            -H "Content-Type: application/json" \
-            -d "{\"appkey\":\"${{ secrets.DINGTALK_APP_KEY }}\",\"appsecret\":\"${{ secrets.DINGTALK_APP_SECRET }}\"}")
+          TOKEN_RESPONSE=$(curl -s "https://oapi.dingtalk.com/gettoken?appkey=${{ secrets.DINGTALK_APP_KEY }}&appsecret=${{ secrets.DINGTALK_APP_SECRET }}")
           
           ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
           
