@@ -8,7 +8,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>改善案例 - 华工科技精益改善</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20260923094531">
     <style>
         .category-header {
             background: linear-gradient(135deg, #0052cc 0%, #003d99 100%);
@@ -186,7 +186,7 @@ var CASES = []; // 由下方 loadCasesFromBackend() 异步填充
         caseGrid.innerHTML = html;
         noResult.style.display = count === 0 ? "block" : "none";
         document.querySelectorAll(".simple-case-card").forEach(function (card) {
-            card.addEventListener("click", function () { openModal(parseInt(this.getAttribute("data-id"))); });
+            card.addEventListener("click", function () { openModal(this.getAttribute("data-id")); });
         });
     }
 
@@ -203,7 +203,7 @@ var CASES = []; // 由下方 loadCasesFromBackend() 异步填充
     }
 
     function openModal(id) {
-        var c = CASES.find(function (x) { return x.id === id; });
+        var c = CASES.find(function (x) { return String(x.id) === String(id); });
         if (!c) return;
         var html = '<div class="detail-hero"><img src="' + c.cover + '" alt="' + c.title + '" onerror="this.src=\'https://via.placeholder.com/800x400/0052cc/ffffff?text=HPS\'"><span class="detail-badge">' + c.categoryName + '</span></div>'
             + '<div class="detail-content"><h2 class="detail-title">' + c.title + '</h2>'
