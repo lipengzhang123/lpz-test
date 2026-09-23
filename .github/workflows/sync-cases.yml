@@ -15,7 +15,10 @@ jobs:
       - name: Get Access Token
         id: get_token
         run: |
-          TOKEN_RESPONSE=$(curl -s "https://oapi.dingtalk.com/gettoken?appkey=${{ secrets.DINGTALK_APP_KEY }}&appsecret=${{ secrets.DINGTALK_APP_SECRET }}")
+          ENCODED_KEY=$(python3 -c "import urllib.parse; print(urllib.parse.quote('${{ secrets.DINGTALK_APP_KEY }}', safe=''))")
+          ENCODED_SECRET=$(python3 -c "import urllib.parse; print(urllib.parse.quote('${{ secrets.DINGTALK_APP_SECRET }}', safe=''))")
+          
+          TOKEN_RESPONSE=$(curl -s "https://oapi.dingtalk.com/gettoken?appkey=${ENCODED_KEY}&appsecret=${ENCODED_SECRET}")
           
           ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
           
