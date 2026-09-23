@@ -35,7 +35,7 @@ jobs:
         id: fetch_data
         run: |
           DATA_RESPONSE=$(curl -s -X GET \
-            "https://api.dingtalk.com/v1.0/notable/bases/${{ secrets.DINGTALK_BASE_ID }}/tables/${{ secrets.DINGTALK_TABLE_ID }}/records" \
+            "https://api.dingtalk.com/v1.0/notable/instances/${{ secrets.DINGTALK_BASE_ID }}/tables/${{ secrets.DINGTALK_TABLE_ID }}/records" \
             -H "x-acs-dingtalk-access-token: ${{ steps.get_token.outputs.access_token }}" \
             -H "Content-Type: application/json")
           
