@@ -34,12 +34,12 @@ jobs:
       - name: Fetch AI Table Data
         id: fetch_data
         run: |
-          DATA_RESPONSE=$(curl -s -X GET \
-            "https://api.dingtalk.com/v1.0/notable/instances/${{ secrets.DINGTALK_BASE_ID }}/tables/${{ secrets.DINGTALK_TABLE_ID }}/records" \
+          DATA_RESPONSE=$(curl -s -X POST \
+            "https://api.dingtalk.com/v1.0/notable/bases/${{ secrets.DINGTALK_BASE_ID }}/sheets/${{ secrets.DINGTALK_TABLE_ID }}/records/list" \
             -H "x-acs-dingtalk-access-token: ${{ steps.get_token.outputs.access_token }}" \
             -H "Content-Type: application/json")
           
-          RECORD_COUNT=$(echo "$DATA_RESPONSE" | jq '.recordCount // 0')
+          RECORD_COUNT=$(echo "$DATA_RESPONSE" | jq '.total // 0')
           
           if [ "$RECORD_COUNT" -eq 0 ]; then
             echo "No records found in AI table"
