@@ -2,329 +2,10 @@
   "errcode": 0,
   "data": [
     {
-      "id": 1,
-      "title": "装配车间5S目视化标杆打造",
-      "category": "yield",
-      "categoryName": "良率改善",
-      "company": "华工图像",
-      "level": "黄带",
-      "date": "2026-03",
-      "tags": [
-        "5S",
-        "目视化",
-        "定置管理",
-        "现场改善"
-      ],
-      "cover": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop",
-      "images": [],
-      "summary": "总装一厂装配线区域物料摆放混乱、工具寻找耗时严重，平均每班次浪费在寻找工具和物料上的时间达45分钟。通过系统性推行5S管理，建立目视化标准，实现现场\"一眼可见、一秒可取\"的改善目标。",
-      "approach": [
-        "1. 现状调研：绘制车间布局图，标记20处物料堆积点和15处工具分散区",
-        "1) 整理阶段：清除区域内存放超3个月的呆滞物料共计1.2吨",
-        "1. 整顿阶段：引入影子板工具柜12套，物料架定置标识84处",
-        "1) 清扫阶段：制定设备日常清扫点检表，责任到人",
-        "1. 标准化：编制《5S目视化管理手册》，拍照标杆区域供其他产线参照",
-        "1) 素养固化：每日5S巡检打分，纳入班组绩效月度考核"
-      ],
-      "results": [
-        {
-          "num": "68%",
-          "label": "工具寻找时间减少"
-        },
-        {
-          "num": "45→8",
-          "label": "每班次浪费时间 min"
-        },
-        {
-          "num": "1.2",
-          "label": "呆滞物料清除 t"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "冲压产线换模时间SMED改善",
-      "category": "hours",
-      "categoryName": "工时优化",
-      "company": "华南工业园 · 冲压车间",
-      "level": "绿带",
-      "date": "2026-02",
-      "tags": [
-        "SMED",
-        "快速换模",
-        "OEE",
-        "流程优化"
-      ],
-      "cover": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&h=500&fit=crop",
-      "images": [],
-      "summary": "冲压线换模平均耗时38分钟，严重影响小批量多品种订单的交付能力。项目组运用SMED方法，将内部作业转化为外部作业，实现换模时间大幅压缩。",
-      "approach": [
-        "1. 录像分析：对6次换模过程全程录像，逐帧分析区分内部/外部作业",
-        "1) 并行作业：将模具预热、螺栓准备等5项作业转为停机前外部作业",
-        "1. 快速夹紧：引入液压快速锁模装置替代螺栓紧固，夹紧时间减少60%",
-        "1) 标准化作业：编制换模标准作业指导书（SOP），设定换模标准时间14分钟",
-        "1. 人员培训：开展3轮换模实操培训，建立换模技能星级认证制度"
-      ],
-      "results": [
-        {
-          "num": "63%",
-          "label": "换模时间缩短"
-        },
-        {
-          "num": "38→14",
-          "label": "平均换模时间 min"
-        },
-        {
-          "num": "12%",
-          "label": "OEE提升 +"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "包装材料成本削减项目",
-      "category": "substitute",
-      "categoryName": "材料替代",
-      "company": "西南基地 · 包装事业部",
-      "level": "绿带",
-      "date": "2026-01",
-      "tags": [
-        "降本增效",
-        "包装优化",
-        "VAVE",
-        "供应链"
-      ],
-      "cover": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=500&fit=crop",
-      "images": [],
-      "summary": "年度包装材料采购成本占比达产品成本的8.3%，高于行业平均水平。通过VAVE分析、材料替代和供应商整合，系统性削减包装成本。",
-      "approach": [
-        "1. 成本拆解：对32种包材进行BOM级成本拆解，识别高成本物料8项",
-        "1) 材料替代：将3款产品纸箱由5层瓦楞改为3层高强度瓦楞，强度达标且降本23%",
-        "1. 结构优化：重新设计缓冲内衬结构，单套用量减少15%",
-        "1) 供应商整合：将包材供应商从12家整合至6家，集中采购获得8%价格优惠",
-        "1. 循环包装：对内部周转用箱引入可循环塑料箱，替代一次性纸箱",
-        "1) 标准化：建立包材成本月度监控看板，异常波动自动预警"
-      ],
-      "results": [
-        {
-          "num": "186万",
-          "label": "年化降本金额 ¥"
-        },
-        {
-          "num": "22%",
-          "label": "包材成本占比 -"
-        },
-        {
-          "num": "8.3%→6.5%",
-          "label": "成本占比变化"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "注塑车间自动上料系统改造",
-      "category": "headcount",
-      "categoryName": "人数优化",
-      "company": "华东制造基地 · 注塑车间",
-      "level": "绿带",
-      "date": "2026-03",
-      "tags": [
-        "自动化",
-        "注塑",
-        "供料系统",
-        "少人化"
-      ],
-      "cover": "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&h=500&fit=crop",
-      "images": [],
-      "summary": "注塑车间12台注塑机上料依赖人工搬运，每班次3名工人专职上料，劳动强度大且存在物料混料风险。通过引入集中供料自动化系统，实现少人化运行。",
-      "approach": [
-        "1. 需求分析：12台注塑机日耗料量3.6吨，人工搬运距离平均60米/次",
-        "1) 方案设计：设计中央供料站+管道输送方案，12台机分区供料",
-        "1. 设备选型：选用真空吸料机+不锈钢管道+中央控制柜",
-        "1) 防错设计：不同原料管道颜色区分，接头防呆设计杜绝混料",
-        "1. 调试优化：分3阶段调试，逐台接入验证供料稳定性",
-        "1) 人员转岗：原3名上料工转岗至设备维护和品质检查岗位"
-      ],
-      "results": [
-        {
-          "num": "3→0",
-          "label": "上料人员 人"
-        },
-        {
-          "num": "0",
-          "label": "混料事故"
-        },
-        {
-          "num": "52万",
-          "label": "年人工节约 ¥"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "车间通道安全改善与防撞系统",
-      "category": "utilities",
-      "categoryName": "水电气",
-      "company": "华南工业园 · 物流部",
-      "level": "黄带",
-      "date": "2026-01",
-      "tags": [
-        "目视化",
-        "安全",
-        "叉车防撞",
-        "人车分流"
-      ],
-      "cover": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=500&fit=crop",
-      "images": [],
-      "summary": "车间内叉车与行人通道交叉，近一年发生3起轻微碰撞事故。通过人车分流设计、防撞预警系统和安全目视化，系统提升车间本质安全水平。",
-      "approach": [
-        "1. 风险识别：绘制车间人车流动热力图，标记7处高风险交叉点",
-        "1) 通道改造：重新规划行人通道与叉车通道，物理隔离实现人车分流",
-        "1. 智能防撞：叉车安装超声波防撞传感器+蜂鸣报警，检测2米内行人自动报警",
-        "1) 目视化：地面施划黄黑斑马线、安全警示标语、凸面镜设置在盲区转角",
-        "1. 限速管理：叉车安装限速器，厂区内限速8km/h，超速自动记录",
-        "1) 培训考核：全员安全培训+叉车司机专项考核，建立安全积分制度"
-      ],
-      "results": [
-        {
-          "num": "0",
-          "label": "碰撞事故（改善后）"
-        },
-        {
-          "num": "7→0",
-          "label": "高风险交叉点"
-        },
-        {
-          "num": "100%",
-          "label": "叉车限速合规率"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "机加工车间刀具管理系统改善",
-      "category": "spare_parts",
-      "categoryName": "备件",
-      "company": "华北制造基地 · 机加工车间",
-      "level": "黄带",
-      "date": "2026-03",
-      "tags": [
-        "目视化",
-        "刀具管理",
-        "降本",
-        "寿命管理"
-      ],
-      "cover": "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=800&h=500&fit=crop",
-      "images": [],
-      "summary": "机加工车间刀具年消耗费用达280万元，存在过早更换、刀具丢失、领用混乱等问题。通过建立刀具寿命管理系统和领用规范，实现刀具成本有效管控。",
-      "approach": [
-        "1. 现状摸底：盘点在库刀具种类87种，过期更换率高达35%",
-        "1) 寿命管理：建立刀具使用寿命数据库，按加工材质和参数设定寿命基准",
-        "1. 预警机制：刀具使用次数达寿命80%时系统黄灯预警，95%红灯强制更换",
-        "1) 领用规范：实施\"以旧换新\"领用制度，旧刀回收验证后方可领新刀",
-        "1. 修磨再利用：可修磨刀具建立修磨台账，平均修磨3次再报废",
-        "1) 目视化柜：引入智能刀具柜，刷卡领用，自动记录使用人和刀具编号"
-      ],
-      "results": [
-        {
-          "num": "18%",
-          "label": "刀具年消耗 -"
-        },
-        {
-          "num": "35%→8%",
-          "label": "过早更换率"
-        },
-        {
-          "num": "50万",
-          "label": "年节约金额 ¥"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "title": "成品仓库布局优化与拣货效率提升",
-      "category": "indirect_staff",
-      "categoryName": "间接人员",
-      "company": "西南基地 · 仓储部",
-      "level": "绿带",
-      "date": "2026-02",
-      "tags": [
-        "仓储优化",
-        "ABC分类",
-        "拣货路径",
-        "WMS"
-      ],
-      "cover": "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=500&fit=crop",
-      "images": [],
-      "summary": "成品仓库面积5000㎡，SKU超过800种，日均拣货单量300+。原有布局导致拣货路径冗长、找货耗时大。通过ABC分类重构布局，优化拣货路径，提升出入库效率。",
-      "approach": [
-        "1. 数据分析：提取12个月出库数据，按ABC分类法将SKU分为A(20%)/B(30%)/C(50%)三类",
-        "1) 布局重构：A类品移至靠近出货口的黄金区域，C类品移至后方高位货架",
-        "1. 储位优化：引入动态储位管理，A类品储位间距加大提升周转效率",
-        "1) 路径优化：用S型路径算法替代原有自由拣货模式，减少重复行走",
-        "1. WMS升级：系统自动推荐最优拣货路径，PDA扫码指引防错",
-        "1) 看板管理：设置出入库效率看板，实时监控拣货时效"
-      ],
-      "results": [
-        {
-          "num": "35%",
-          "label": "平均拣货时间 -"
-        },
-        {
-          "num": "28%",
-          "label": "出入库效率 +"
-        },
-        {
-          "num": "18%",
-          "label": "行走距离 -"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "title": "供应商来料检验流程优化",
-      "category": "auxiliary",
-      "categoryName": "辅料",
-      "company": "华北制造基地 · 品质保证部",
-      "level": "黄带",
-      "date": "2026-01",
-      "tags": [
-        "流程优化",
-        "IQC",
-        "来料检验",
-        "免检机制"
-      ],
-      "cover": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop",
-      "images": [],
-      "summary": "来料检验周期平均2.5天，影响生产排程。通过对供应商分级管理、建立免检机制和检验流程优化，缩短来料检验周期，提升供应链响应速度。",
-      "approach": [
-        "1. 数据分析：统计年度来料检验数据，A类供应商合格率99.2%但全检耗时大",
-        "1) 供应商分级：按历史质量表现将供应商分为A/B/C三级，差异化检验策略",
-        "1. 免检机制：A级供应商连续6个月批次合格率>99%可申请免检，转为定期稽核",
-        "1) 抽样优化：B类供应商从全检调整为AQL抽检，抽样比例降低50%",
-        "1. 检验前移：推动3家关键供应商实施出货前检验（OS），问题在源头拦截",
-        "1) 信息化：IQC检验结果电子化，与ERP联动，合格自动放行入库"
-      ],
-      "results": [
-        {
-          "num": "2.5→0.8",
-          "label": "平均检验周期 天"
-        },
-        {
-          "num": "60%",
-          "label": "A类供应商免检率"
-        },
-        {
-          "num": "15%",
-          "label": "来料周转效率 +"
-        }
-      ]
-    },
-    {
-      "id": 9,
+      "id": "z7Kzk5TTZW",
       "title": "",
-      "category": "yield",
-      "categoryName": "良率改善",
+      "category": "",
+      "categoryName": "",
       "company": "",
       "level": "",
       "date": "",
@@ -336,375 +17,10 @@
       "results": []
     },
     {
-      "id": 10,
-      "title": "热固不良改善",
-      "category": "yield",
-      "categoryName": "良率改善",
-      "company": "高理PTC",
-      "level": "绿带",
-      "date": "2026-03",
-      "tags": [
-        "来料检验",
-        "供应商管理",
-        "良率提升",
-        "脏污",
-        "原材料改善"
-      ],
-      "cover": "https://i.imgs.ovh/2026/09/21/e73b5988267f56d83c8b436ff2283c32.png",
-      "images": [],
-      "summary": "供应商直接原因：冲压翻边加拉伸油防卡模，清洗不净，铝片油残留。\n\n供应商流出原因：清洗后未验证清洁有效性即出货。\n\n我司管理原因：来料验收基准无表面洁净度要求。[https://i.imgs.ovh/2026/09/21/2d35c336ad767c62ef8a811bef54dbdb.png](https://i.imgs.ovh/2026/09/21/2d35c336ad767c62ef8a811bef54dbdb.png)",
-      "approach": [
-        "解决思路：以工艺流程图、鱼骨图排查不良可能原因，逐项验证要因。",
-        "改善前：铝电极表面达因笔测试不合格，加热包热固后手可轻易掰开。",
-        "改善后：酒精清洁表面后达因笔测试合格，加热包热固后合格。",
-        "改善措施：1、供应商端：导入超声波清洗，优化原清洗工艺；出货前用38号达因笔抽测，合格后放行。2、我司端：进料验收增加电极片表面洁净度达因笔检验；加热包开班首检确认热固效果。[https://i.imgs.ovh/2026/09/21/e73b5988267f56d83c8b436ff2283c32.png](https://i.imgs.ovh/2026/09/21/e73b5988267f56d83c8b436ff2283c32.png)"
-      ],
-      "results": [
-        {
-          "num": "5.6%",
-          "label": "热固不良率从 降至0"
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "title": "原材料降本",
-      "category": "substitute",
-      "categoryName": "材料替代",
-      "company": "高理感知",
-      "level": "绿带",
-      "date": "2026-03",
-      "tags": [
-        "降本增效",
-        "供应商管理",
-        "原材料改善"
-      ],
-      "cover": "https://i.imgs.ovh/2026/09/21/e73b5988267f56d83c8b436ff2283c32.png\n",
-      "images": [],
-      "summary": "GAT热敏电阻引线因供应商生产工艺不同，成本差异显著。[https://i.imgs.ovh/2026/09/22/abd165d11b8c137b5f71addd127065de.png](https://i.imgs.ovh/2026/09/22/abd165d11b8c137b5f71addd127065de.png)",
-      "approach": [
-        "解决思路：选取GAT元件中引线用量大、成本高的产品，分析现有供应商工艺，开发满足性能要求的低成本供应商。",
-        "改善前：原供应商引线年采购额上千万，交期与成本暂无改善空间。",
-        "改善后：开发新引线供应商，采用低成本焊接工艺及CP尾纤，缩短交期并降本。",
-        "措施：对比验证新供应商工艺及产品，合格后逐步减少并替代原供应商采购份额。[https://i.imgs.ovh/2026/09/21/e73b5988267f56d83c8b436ff2283c32.png](https://i.imgs.ovh/2026/09/21/e73b5988267f56d83c8b436ff2283c32.png)"
-      ],
-      "results": [
-        {
-          "num": "20%",
-          "label": "按每年 的替代量，预计全年降本收益可达60万元"
-        },
-        {
-          "num": "100%",
-          "label": "按 全替代，预计降本达325万元"
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "title": "环氧胶单支用量降低",
-      "category": "reduce",
-      "categoryName": "用量降低",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [
-        "现场改善",
-        "降本增效",
-        "包装优化"
-      ],
-      "cover": "",
-      "images": [],
-      "summary": "环氧胶全流程周转使用损耗约13.9%，其中包装、设备、容器残留占81%，手工作业浪费占13%，管理浪费占6%。",
-      "approach": [
-        "解决思路：调查环氧胶使用流程，量化损耗及原因，按优先级识别并改善浪费源。",
-        "措施：减小胶盘容积；插壳点胶机余胶回收；优化来料包装结构；减少补胶容器（多人共用胶杯）；包装桶残留环氧回收（原先直接丢弃）。"
-      ],
-      "results": [
-        {
-          "num": "2024",
-          "label": "单支用量环比 年下降6.38%，降本286万元"
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "title": "人效提升-工艺优化",
-      "category": "headcount",
-      "categoryName": "人数优化",
-      "company": "高理PTC",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "https://i.imgs.ovh/2026/09/21/50bd429f21fadbf52ea7c27a72b39298.png",
-      "images": [],
-      "summary": "灌胶工序为了避免胶溢流，需要上下固定夹具分别灌胶固化，工时长效率低成为瓶颈。[https://i.imgs.ovh/2026/09/21/46fdfc2faf97b4e30a048b431958cb23.png](https://i.imgs.ovh/2026/09/21/46fdfc2faf97b4e30a048b431958cb23.png)",
-      "approach": [
-        "将产品结构进行更改，使黑色壳体自身具备阻止胶溢流功能，使可以同时上下灌胶，然后直接固化。[https://i.imgs.ovh/2026/09/21/50bd429f21fadbf52ea7c27a72b39298.png](https://i.imgs.ovh/2026/09/21/50bd429f21fadbf52ea7c27a72b39298.png)"
-      ],
-      "results": [
-        {
-          "num": "1.每批次生产最多60台，生产效率提升4倍\n\n2.直接取消夹具，夹具成本下降100%\n\n3.固化烘箱2台，设备减少80%",
-          "label": ""
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "title": "人效提升-布局调整",
-      "category": "hours",
-      "categoryName": "工时优化",
-      "company": "高理PTC",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [
-        "布局调整"
-      ],
-      "cover": "https://i.imgs.ovh/2026/09/21/ecb3b2852d2d8d9ba52621993dcf8721.png\n",
-      "images": [],
-      "summary": "1、物流路线交叉、迂回；\n\n2、物料搬运距离远、重复搬运；[https://i.imgs.ovh/2026/09/21/1c3884247a2281729a623a76be00cfc2.png](https://i.imgs.ovh/2026/09/21/1c3884247a2281729a623a76be00cfc2.png)",
-      "approach": [
-        "1.建立原料线边仓，避免原材料长距离多频次发货。",
-        "2.成品仓库就近原则，从之前厂房调整到生产楼栋，单次缩短配送距离150米。",
-        "3、内部12个工段，物流路线长距离搬运达8次，调整成一笔画的就近布局，生产效率提升超过10%[https://i.imgs.ovh/2026/09/21/ecb3b2852d2d8d9ba52621993dcf8721.png](https://i.imgs.ovh/2026/09/21/ecb3b2852d2d8d9ba52621993dcf8721.png)"
-      ],
-      "results": [
-        {
-          "num": "10%",
-          "label": "UPPH提升超"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "title": "人效提升-线平衡改善",
-      "category": "yield",
-      "categoryName": "良率改善",
-      "company": "高理PTC",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [
-        "线平衡"
-      ],
-      "cover": "https://i.imgs.ovh/2026/09/21/33292d8bdd207dc2cd8f12388fbf80e2.png",
-      "images": [],
-      "summary": "1、线体按照18个工位设计，UPPH实际值为5.51，线平衡率为72%，线平衡低造成近30%工时等待浪费。\n\n2、线小时产出和客户需求不一致。[https://i.imgs.ovh/2026/09/21/676f4a9f0afa1268623769e104b1d68f.png](https://i.imgs.ovh/2026/09/21/676f4a9f0afa1268623769e104b1d68f.png)",
-      "approach": [
-        "结合产品日需求，在各系列产品中累计完成超过11个单件流工段的ECRS优化项目。ECRS工序合并后按照13工位设计，L型改为一字型，UPPH值提升为6.0，线平衡率提升至81%[https://i.imgs.ovh/2026/09/21/33292d8bdd207dc2cd8f12388fbf80e2.png](https://i.imgs.ovh/2026/09/21/33292d8bdd207dc2cd8f12388fbf80e2.png)"
-      ],
-      "results": [
-        {
-          "num": "6%",
-          "label": "UPPH提升超过"
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "title": "电费降低-提升产出",
-      "category": "utilities",
-      "categoryName": "水电气",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "https://i.imgs.ovh/2026/09/21/ceb00d7877689ad675ab9aaf523c0e07.png",
-      "images": [],
-      "summary": "烘箱能耗很高，每次进入烘箱的周转器具还有空间增加层数，但是增加层数后，烘干效果不好。[https://i.imgs.ovh/2026/09/21/541f07f3a5cdb9a94b763a1510f71c7f.png](https://i.imgs.ovh/2026/09/21/541f07f3a5cdb9a94b763a1510f71c7f.png)",
-      "approach": [
-        "优化周转烘车，将烘车底板改善为带孔钢板，增加烘水时空气流动。改善后根据烘干效果，由原4层烘车改善为5层烘车，批次固化产能提升25%，同时烘干时间缩短10%。[https://i.imgs.ovh/2026/09/21/ceb00d7877689ad675ab9aaf523c0e07.png](https://i.imgs.ovh/2026/09/21/ceb00d7877689ad675ab9aaf523c0e07.png)"
-      ],
-      "results": [
-        {
-          "num": "87万",
-          "label": "根据节省开机时间，预计全年节省电费 元"
-        }
-      ]
-    },
-    {
-      "id": 17,
-      "title": "电费降低-照明灯",
-      "category": "utilities",
-      "categoryName": "水电气",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "https://i.imgs.ovh/2026/09/21/3a485e8bfe6bf35941f132c90b297062.png",
-      "images": [],
-      "summary": "每年电费进行改善，相同亮度功率越低，照明灯节能情况越有优势。[https://i.imgs.ovh/2026/09/21/f86c2e588e40c014f0e823f1ed848906.png](https://i.imgs.ovh/2026/09/21/f86c2e588e40c014f0e823f1ed848906.png)",
-      "approach": [
-        "导入高效节能LED灯(7.5W)替代现有普通LED灯(16W)，实际用电量减少53%，直接降低照明能耗。[https://i.imgs.ovh/2026/09/21/3a485e8bfe6bf35941f132c90b297062.png](https://i.imgs.ovh/2026/09/21/3a485e8bfe6bf35941f132c90b297062.png)"
-      ],
-      "results": [
-        {
-          "num": "9",
-          "label": "号楼每年节省电费8.5万"
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "title": "设备能耗偏高-未改",
-      "category": "utilities",
-      "categoryName": "水电气",
-      "company": "武汉图像",
-      "level": "绿带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "",
-      "images": [],
-      "summary": "设备存在空转情况",
-      "approach": [
-        "进行集中排产"
-      ],
-      "results": [
-        {
-          "num": "3月总计开工22天，总产出100.8万米，日均产量由3.55万米提升至4.58万米，单日产量上涨29%。\n\n产出率由4249米/小时，提升至5727米/小时，提升34.78%",
-          "label": ""
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "title": "工艺优化-未改",
-      "category": "auxiliary",
-      "categoryName": "辅料",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "",
-      "images": [],
-      "summary": "AS水温产品清洗工艺耗材辅料用量存在冗余，考虑取消清洗工序",
-      "approach": [
-        "**工艺优化，取消耗材使用：**&#x41;S水温产品取消清洗，减少酒精、白电油用量"
-      ],
-      "results": [
-        {
-          "num": "41.8万",
-          "label": "美纹纸替代全年节省成本 元"
-        },
-        {
-          "num": "25万",
-          "label": "模具采购全年降本 元"
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "title": "低成本替代-模具",
-      "category": "auxiliary",
-      "categoryName": "辅料",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "https://i.imgs.ovh/2026/09/17/1143c308041e3fa0b581f37a38883467.png",
-      "images": [],
-      "summary": "模具是整套采购，每次更换只是上模具磨损，下模具不需要进行更换。[https://i.imgs.ovh/2026/09/17/aeda63725c4c669bb58b07a4ac0368a0.png](https://i.imgs.ovh/2026/09/17/aeda63725c4c669bb58b07a4ac0368a0.png)",
-      "approach": [
-        "通过拆分模具结构，将上模、下模分开单独采购，采购灵活性提升[https://i.imgs.ovh/2026/09/17/1143c308041e3fa0b581f37a38883467.png](https://i.imgs.ovh/2026/09/17/1143c308041e3fa0b581f37a38883467.png)"
-      ],
-      "results": [
-        {
-          "num": "25万",
-          "label": "模具采购全年节省 &#x20;"
-        }
-      ]
-    },
-    {
-      "id": 21,
-      "title": "减少用量-美纹纸",
-      "category": "auxiliary",
-      "categoryName": "辅料",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "https://i.imgs.ovh/2026/09/17/2955c59ceeca1018fdbd5d0dc1aef3b4.png",
-      "images": [],
-      "summary": "1、在可变动制造费用中，低值易耗品占比最高，达 41.2%；其中美纹纸在低值易耗品中占 24.8%，降本潜力最大。\n2、工装需要美纹纸来固定线缆，每套工装使用 3 条美纹纸，用量大成本高。[https://i.imgs.ovh/2026/09/17/2292d60d5c35ea0090decf79b6cfeb3f.png](https://i.imgs.ovh/2026/09/17/2292d60d5c35ea0090decf79b6cfeb3f.png)",
-      "approach": [
-        "线缆固定效果取决于美纹纸和工装之间的贴合力。通过打磨工装，增加工装和美纹纸的粘贴力，美纹纸由 3 条减至 2 条，10mm 降为8mm 后，也能满足固定线束的要求。[https://i.imgs.ovh/2026/09/17/2955c59ceeca1018fdbd5d0dc1aef3b4.png](https://i.imgs.ovh/2026/09/17/2955c59ceeca1018fdbd5d0dc1aef3b4.png)"
-      ],
-      "results": [
-        {
-          "num": "20%",
-          "label": "单只价格下降 ，美纹纸替代全年节省41.8万元"
-        }
-      ]
-    },
-    {
-      "id": 22,
-      "title": "减少用量-清洗酒精",
-      "category": "auxiliary",
-      "categoryName": "辅料",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "https://i.imgs.ovh/2026/09/21/3ca9100266b261e1f4935a5af591b080.png",
-      "images": [],
-      "summary": "酒精和白电油主要使用在焊接精洗，清洗槽按照频次更换，减少清洗槽的容积并且能满足物料清洗是减少用量的关键。[https://i.imgs.ovh/2026/09/21/52de8f9984440c69afbcfc322cc59360.png](https://i.imgs.ovh/2026/09/21/52de8f9984440c69afbcfc322cc59360.png)",
-      "approach": [
-        "改善前：清洗槽液位17cm，按照产品尺寸，液位只需要不低于8cm即可。改善后：在清洗槽底部增加35cm*31cm*2cm铝块，使槽内容积变小，液位满足8cm，根据容积计算，每次可节省酒精16公斤、白电油18公斤，预计年节省酒精、白电油9.2万元。[https://i.imgs.ovh/2026/09/21/3ca9100266b261e1f4935a5af591b080.png](https://i.imgs.ovh/2026/09/21/3ca9100266b261e1f4935a5af591b080.png)"
-      ],
-      "results": [
-        {
-          "num": "9.2万",
-          "label": "每年节省金额 /年"
-        }
-      ]
-    },
-    {
-      "id": 23,
-      "title": "重复使用-酒精",
-      "category": "auxiliary",
-      "categoryName": "辅料",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "https://i.imgs.ovh/2026/09/21/70502c5b417de3e5b66716824abdf650.png",
-      "images": [],
-      "summary": "元件清洗用工业酒精清洗完元件后，直接报废，这些酒精对于清洁度要求不高场景还有使用价值。[https://i.imgs.ovh/2026/09/21/80347539ac6bd5d8bab5cb910bb535dc.png](https://i.imgs.ovh/2026/09/21/80347539ac6bd5d8bab5cb910bb535dc.png)",
-      "approach": [
-        "**耗材重复使用：**&#x6E05;洗元件更换下来的酒精，可以用于一些工装清洁，梳理后可以用于插壳点胶机头道清洗。元件每天产生63kg二次利用酒精。[https://i.imgs.ovh/2026/09/21/70502c5b417de3e5b66716824abdf650.png](https://i.imgs.ovh/2026/09/21/70502c5b417de3e5b66716824abdf650.png)"
-      ],
-      "results": [
-        {
-          "num": "18.9万",
-          "label": "每年节省金额"
-        }
-      ]
-    },
-    {
-      "id": 24,
-      "title": "重复使用-橡皮筋",
-      "category": "auxiliary",
-      "categoryName": "辅料",
-      "company": "高理感知",
-      "level": "黑带",
-      "date": "2026-03",
-      "tags": [],
-      "cover": "https://i.imgs.ovh/2026/09/21/038098ac17b528162dace04a0e9500e8.png",
-      "images": [],
-      "summary": "捆线橡皮筋使用刀片割断进行报废，每年购买几万橡皮筋。[https://i.imgs.ovh/2026/09/21/535ea20da01216d89474221325663ff9.png](https://i.imgs.ovh/2026/09/21/535ea20da01216d89474221325663ff9.png)",
-      "approach": [
-        "**耗材重复使用：**&#x6346;线橡皮筋拆下时放在物料盒内回收重复使用，预计全年可节省橡皮筋成本近10万元。[https://i.imgs.ovh/2026/09/21/038098ac17b528162dace04a0e9500e8.png](https://i.imgs.ovh/2026/09/21/038098ac17b528162dace04a0e9500e8.png)"
-      ],
-      "results": [
-        {
-          "num": "0万",
-          "label": "每年节省金额 /年"
-        }
-      ]
-    },
-    {
-      "id": 25,
+      "id": "Ow8KIJnT3Z",
       "title": "",
-      "category": "yield",
-      "categoryName": "良率改善",
+      "category": "",
+      "categoryName": "",
       "company": "",
       "level": "",
       "date": "",
@@ -716,10 +32,10 @@
       "results": []
     },
     {
-      "id": 26,
+      "id": "20bHG5qyxl",
       "title": "",
-      "category": "yield",
-      "categoryName": "良率改善",
+      "category": "",
+      "categoryName": "",
       "company": "",
       "level": "",
       "date": "",
@@ -731,10 +47,10 @@
       "results": []
     },
     {
-      "id": 27,
+      "id": "JpKRfxEHXo",
       "title": "",
-      "category": "yield",
-      "categoryName": "良率改善",
+      "category": "",
+      "categoryName": "",
       "company": "",
       "level": "",
       "date": "",
@@ -746,10 +62,295 @@
       "results": []
     },
     {
-      "id": 28,
+      "id": "TcignMn7Q7",
       "title": "",
-      "category": "yield",
-      "categoryName": "良率改善",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "AehA24RAnm",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "rH8jh9Y1JH",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "ZkbUskQiVV",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "RUk6EUpfOj",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "UlP0ozAI7q",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "HVcIb1u5SC",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "7pdHFZGXbW",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "zSiGN1HswZ",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "3qP38oehln",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "yltPckVDGI",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "Exp7vGUfua",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "izn59qxKtJ",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "IPFRO7fy25",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "aTl88ebxCV",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "DGKYgH7gvU",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "N0AGG094QE",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "OsMr0AitJR",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "3Mu7AGIe6F",
+      "title": "",
+      "category": "",
+      "categoryName": "",
+      "company": "",
+      "level": "",
+      "date": "",
+      "tags": [],
+      "cover": "",
+      "images": [],
+      "summary": "",
+      "approach": [],
+      "results": []
+    },
+    {
+      "id": "zHOO5jGYLg",
+      "title": "",
+      "category": "",
+      "categoryName": "",
       "company": "",
       "level": "",
       "date": "",
@@ -760,9 +361,5 @@
       "approach": [],
       "results": []
     }
-  ],
-  "total": 28,
-  "page": 1,
-  "size": 28,
-  "syncTime": "2026-09-22 15:06:44"
+  ]
 }
