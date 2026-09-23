@@ -105,7 +105,7 @@
         // 绑定卡片点击
         document.querySelectorAll(".case-card").forEach(function (card) {
             card.addEventListener("click", function () {
-                openModal(parseInt(this.getAttribute("data-id")));
+                openModal(this.getAttribute("data-id"));
             });
         });
     }
@@ -197,7 +197,7 @@
 
     /* ---------- 5. 案例详情弹窗 ---------- */
     function openModal(id) {
-        var c = CASES.find(function (x) { return x.id === id; });
+        var c = CASES.find(function (x) { return String(x.id) === String(id); });
         if (!c) return;
 
         var html = ''
